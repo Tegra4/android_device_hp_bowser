@@ -16,48 +16,15 @@ on early-init
     write /sys/class/gpio/gpio131/direction "in"
 
 on init
-    mkdir /mnt/shell/emulated 0700 shell shell
-    mkdir /storage/emulated 0555 root root
-    mkdir /storage/sdcard1 0555 root root
-    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
-
-    export SECONDARY_STORAGE /storage/sdcard1
-    export EXTERNAL_STORAGE /storage/emulated/legacy
-    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
-    export EMULATED_STORAGE_TARGET /storage/emulated
-
     # Support legacy paths
-    symlink /storage/emulated/legacy /sdcard
-    symlink /storage/emulated/legacy /mnt/sdcard
-    symlink /storage/emulated/legacy /storage/sdcard0
-    symlink /mnt/shell/emulated/0 /storage/emulated/legacy
-
-    # create directory for mounting first usb drives
-    mkdir /storage/usbdrive 0555 root root
-    mkdir /mnt/media_rw/usbdrive 0700 media_rw media_rw
-
-    # create directory for mounting second usb drives
-    mkdir /storage/usbdrive2 0555 root root
-    mkdir /mnt/media_rw/usbdrive2 0700 media_rw media_rw
-
-    # create directory for mounting first usb3 drives
-    mkdir /storage/usbdrive3 0555 root root
-    mkdir /mnt/media_rw/usbdrive3 0700 media_rw media_rw
-
-    # create directory for mounting second drives
-    mkdir /storage/usbdrive4 0555 root root
-    mkdir /mnt/media_rw/usbdrive4 0700 media_rw media_rw
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
 
 on fs
-    setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
-    setprop ro.crypto.umount_sd false
-    setprop ro.crypto.fuse_sdcard true
     mount_all /fstab.bowser
 
 on post-fs-data
     mkdir /data/nvcam 0700 media camera
-
-    mkdir /data/media 0770 media_rw media_rw
 
     mkdir /data/data/mediaserver 0700 media media
 
@@ -168,29 +135,6 @@ on property:usbotg.mode=0
 on property:ro.debuggable=1
     # EMC debug interface
     chmod 666 /sys/kernel/debug/tegra_emc/eack_state
-
-service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
-    class late_start
-
-service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
-    class late_start
-    disabled
-
-service fuse_usbdrive /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbdrive /storage/usbdrive
-    class late_start
-    disabled
-
-service fuse_usbdrive2 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbdrive2 /storage/usbdrive2
-    class late_start
-    disabled
-
-service fuse_usbdrive3 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbdrive3 /storage/usbdrive3
-    class late_start
-    disabled
-
-service fuse_usbdrive4 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbdrive4 /storage/usbdrive4
-    class late_start
-    disabled
 
 on property:init.svc.hciattach=stopped
     write /sys/devices/platform/reg-userspace-consumer.1/state disabled
