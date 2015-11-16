@@ -21,9 +21,9 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
- frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
@@ -59,26 +59,52 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 # Audio configuration
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/audio/audioConfig_qvoice_icera_pc400.xml:system/etc/audioConfig_qvoice_icera_pc400.xml \
-#    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
-#    $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audioConfig_qvoice_icera_pc400.xml:system/etc/audioConfig_qvoice_icera_pc400.xml \
+    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml
 
 # Camera
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/camera/camera_overrides_front.isp:system/etc/camera_overrides_front.isp \
-#    $(LOCAL_PATH)/camera/nvcamera.conf:system/etc/nvcamera.conf \
-#    $(LOCAL_PATH)/camera/model_frontal.xml:system/etc/model_frontal.xml
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/camera/camera_overrides_front.isp:system/etc/camera_overrides_front.isp \
+    $(LOCAL_PATH)/camera/model_frontal.xml:system/etc/model_frontal.xml
+
+# GPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml
 
 # IDC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/idc/elan-touchscreen.idc:system/usr/idc/elan-touchscreen.idc \
+    $(LOCAL_PATH)/idc/hid_06CB_0001.idc:system/usr/idc/hid_06CB_0001.idc \
+    $(LOCAL_PATH)/idc/hid_06CB_2239.idc:system/usr/idc/hid_06CB_2239.idc \
+    $(LOCAL_PATH)/idc/HP_Keyboard.idc:system/usr/idc/HP_Keyboard.idc \
+    $(LOCAL_PATH)/idc/raydium_ts.idc:system/usr/idc/raydium_ts.idc \
+    $(LOCAL_PATH)/idc/sensor00fn11.idc:system/usr/idc/sensor00fn11.idc \
+    $(LOCAL_PATH)/idc/Synaptics_RMI4_TouchPad_Sensor.idc:system/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc
 
 # Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/AT_Translated_Set_2_keyboard.kl:system/usr/keylayout/AT_Translated_Set_2_keyboard.kl \
+    $(LOCAL_PATH)/keylayout/Bowser_Base_Lid_Switch.kl:system/usr/keylayout/Bowser_Base_Lid_Switch.kl \
+    $(LOCAL_PATH)/keylayout/Bowser_Charger_Event.kl:system/usr/keylayout/Bowser_Charger_Event.kl \
+    $(LOCAL_PATH)/keylayout/Bowser_KB_Wake_Event.kl:system/usr/keylayout/Bowser_KB_Wake_Event.kl \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/HP_Keyboard.kl:system/usr/keylayout/HP_Keyboard.kl \
+    $(LOCAL_PATH)/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
+    $(LOCAL_PATH)/keylayout/Vendor_054c_Product_05c4.kl:system/usr/keylayout/Vendor_054c_Product_05c4.kl
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.bowser
 
 # Media config
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml
+    $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -96,6 +122,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd \
-    wpa_supplicant
-
-#PRODUCT_COPY_FILES += \
+    wpa_supplicant \
+    wpa_supplicant.conf

@@ -29,6 +29,12 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
+# GPS
+bin/glgps_nvidiaTegra2android
+lib/hw/gps.broadcom.so
+lib/hw/gps.huawei.so
+lib/libhuawei-ril.so
+
 # Graphics
 etc/enctune.conf
 lib/egl/libEGL_tegra_impl.so
@@ -113,14 +119,15 @@ bin/input_cfboost_init.sh
 # Keystore
 lib/hw/keystore.tegra.so
 
-# Lights
-lib/hw/lights.bowser.so
-
 # Power
 bin/powerservice
 lib/libpowerservice_client.so
 lib/libpowerservice.so
 vendor/lib/hw/power.bowser.so
+
+# Rbe
+bin/wlbwservice
+lib/libwlbwservice.so
 
 # Sensors
 lib/hw/sensors.bowser.so
@@ -154,3 +161,6 @@ lib/libussrd.so
 
 # Wifi
 bin/wwan_loader.sh
+etc/firmware/mp_rtl8723b_fw
+etc/firmware/rtl8723b_config
+etc/firmware/rtl8723b_fw

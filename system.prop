@@ -3,12 +3,11 @@ ro.opengles.version = 131072
 wifi.interface=wlan0
 ap.interface=wlan0
 persist.tegra.nvmmlite = 1
-ro.sf.override_null_lcd_density=yes
 
 # use glcomposer as the default compositor
 persist.tegra.compositor=glcomposer
 
-# supprort change conservative governor when audio playing in early suspend
+# support changing conservative governor when audio is playing in early suspend
 media.audio.screen_off_playing=0
 
 # disable EGL_BUFFER_PRESERVED extension for OpenGLRenderer
