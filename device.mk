@@ -65,6 +65,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml
 
+# Bowser Base Keyhandler
+#PRODUCT_PACKAGES += \
+#    com.cyanogenmod.keyhandler
+
+#PRODUCT_SYSTEM_SERVER_JARS += com.cyanogenmod.keyhandler
+# never dexopt the keyhandler
+#$(call add-product-dex-preopt-module-config,com.cyanogenmod.keyhandler,disable)
+
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/camera_overrides_front.isp:system/etc/camera_overrides_front.isp \
