@@ -891,7 +891,7 @@ static int out_set_parameters(struct audio_stream *stream, const char *kvpairs)
 			if (strcmp(prop_val,"0") != 0)
 				property_set("media.audio.screen_off_playing","0");
         }
-        else if (out->state == AUDIO_A2DP_STATE_STARTED)
+        else if (out->common.state == AUDIO_A2DP_STATE_STARTED)
         {
 			property_set("media.audio.screen_off_playing","3");
         }
