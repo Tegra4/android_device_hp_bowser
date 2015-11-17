@@ -8,7 +8,7 @@
 | GPU                     | NVIDIA® GPU                       |
 | Memory                  | 2GB RAM                           |
 | Shipped Android Version | 4.4.2                             |
-| Storage                 | 16GB                              |
+| Storage                 | 16/32GB                           |
 | MicroSD                 | Up to 128GB                       |
 | USB                     | 1 x USB 3.0 port 2 x USB 2.0 port |
 | Battery                 | Unknown                           |
