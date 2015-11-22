@@ -30,10 +30,10 @@ vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS
-bin/glgps_nvidiaTegra2android
-lib/hw/gps.broadcom.so
-lib/hw/gps.huawei.so
-lib/libhuawei-ril.so
+#bin/glgps_nvidiaTegra2android
+#lib/hw/gps.broadcom.so
+#lib/hw/gps.huawei.so
+#lib/libhuawei-ril.so
 
 # Graphics
 etc/enctune.conf
