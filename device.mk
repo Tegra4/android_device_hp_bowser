@@ -42,6 +42,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := xlarge
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 
 PRODUCT_CHARACTERISTICS := tablet
 
