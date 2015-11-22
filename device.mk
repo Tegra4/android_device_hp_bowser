@@ -119,7 +119,6 @@ PRODUCT_PACKAGES += \
     fstab.bowser \
     init.bowser.rc \
     init.bowser.usb.rc \
-    init.hdcp.rc \
     ueventd.bowser.rc
 
 # USB

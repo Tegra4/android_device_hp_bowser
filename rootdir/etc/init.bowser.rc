@@ -77,8 +77,11 @@ on post-fs-data
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
 
-# Set up HDCP
-import init.hdcp.rc
+    # Create HDCP SRM folder and set its permissions
+    setprop hdcp.srm.path       "/etc/hdcpsrm"
+    setprop hdcp1x.srm.name     "hdcp1x.srm"
+    setprop hdcp2x.srm.name     "hdcp2x.srm"
+    setprop hdcp2xtest.srm.name "hdcp2xtest.srm"
 
 on boot
 
