@@ -1,0 +1,4 @@
+on boot
+
+# Synaptics Touchpad
+service syntouchpad /sbin/syntouchpad
