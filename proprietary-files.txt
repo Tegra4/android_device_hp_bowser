@@ -117,8 +117,7 @@ etc/hdcpsrm/hdcp2xtest.srm
 bin/input_cfboost_init.sh
 
 # Keystore
-lib/hw/keystore.tegra.so
-lib/libtf_crypto_sst.so
+-lib/libtf_crypto_sst.so
 
 # Power
 bin/powerservice

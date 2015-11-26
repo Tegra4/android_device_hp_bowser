@@ -103,6 +103,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
     $(LOCAL_PATH)/keylayout/Vendor_054c_Product_05c4.kl:system/usr/keylayout/Vendor_054c_Product_05c4.kl
 
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.tegra
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.bowser
