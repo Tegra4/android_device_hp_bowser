@@ -123,6 +123,10 @@ PRODUCT_PACKAGES += \
     init.bowser.usb.rc \
     ueventd.bowser.rc
 
+# Synaptics Touchpad
+PRODUCT_PACKAGES += \
+    syntouchpad
+
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory

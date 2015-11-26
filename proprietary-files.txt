@@ -138,9 +138,6 @@ lib/libsensors.base.so
 lib/libsensors.cm3218.so
 lib/libsensors.mpl.so
 
-# Synaptics Touchpad
-bin/syntouchpad
-
 # Trusted Foundation daemon
 bin/tf_daemon
 
