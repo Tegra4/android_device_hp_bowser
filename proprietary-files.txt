@@ -141,10 +141,6 @@ lib/libsensors.mpl.so
 # Synaptics Touchpad
 bin/syntouchpad
 
-# Touchscreen
-lib/hw/ts.default.so
-lib/librm31080.so
-
 # Trusted Foundation daemon
 bin/tf_daemon
 
