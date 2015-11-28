@@ -32,7 +32,6 @@ TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := tegra
-TARGET_TEGRA_VERSION := t114
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
