@@ -1,0 +1,2 @@
+# Synaptics Touchpad
+/system/bin/syntouchpad		        u:object_r:syntouchpad_exec:s0

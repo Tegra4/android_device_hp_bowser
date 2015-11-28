@@ -74,6 +74,14 @@ COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 TARGET_RECOVERY_DEVICE_DIRS += device/hp/bowser
 TARGET_RECOVERY_FSTAB := device/hp/bowser/rootdir/etc/fstab.bowser
 
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/hp/bowser/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    file_contexts \
+    syntouchpad.te
+
 # Wifi
 BOARD_WLAN_DEVICE                := rtl
 BOARD_HAVE_REALTEK_WIFI          := true
