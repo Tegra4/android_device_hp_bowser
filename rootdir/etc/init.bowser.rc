@@ -355,13 +355,13 @@ service ussr_setup /system/bin/ussr_setup.sh
     oneshot
 
 # unified scaling process
-service ussrd /system/bin/ussrd
+service ussrd /system/vendor/bin/ussrd
     user system
     group system
     class main
 
 # unified scaling watchdog process
-service usdwatchdog /system/bin/usdwatchdog --wait 30
+service usdwatchdog /system/vendor/bin/usdwatchdog --wait 30
     user system
     group system
     class main
