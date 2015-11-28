@@ -47,7 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 PRODUCT_CHARACTERISTICS := tablet
 
 # Bootanimation
-TARGET_SCREEN_HEIGHT := 1200
+TARGET_SCREEN_HEIGHT := 1080
 TARGET_SCREEN_WIDTH := 1920
 
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
