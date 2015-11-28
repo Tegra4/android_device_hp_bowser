@@ -77,6 +77,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/camera_overrides_front.isp:system/etc/camera_overrides_front.isp \
     $(LOCAL_PATH)/camera/model_frontal.xml:system/etc/model_frontal.xml
 
+# GPS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.gps=broadcom
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml
+
 # IDC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/elan-touchscreen.idc:system/usr/idc/elan-touchscreen.idc \

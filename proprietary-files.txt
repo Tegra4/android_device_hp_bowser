@@ -93,6 +93,10 @@ lib/libstagefrighthw.so
 lib/libtsechdcp.so
 lib/libtsec_wrapper.so
 
+# GPS
+bin/glgps_nvidiaTegra2android
+lib/hw/gps.broadcom.so
+
 # Graphics firmware
 etc/firmware/tegra11x/nvhost_msenc02.fw
 etc/firmware/tegra11x/nvhost_tsec.fw
@@ -140,7 +144,6 @@ vendor/bin/usdwatchdog
 vendor/bin/ussrd
 
 # Wifi
-bin/wwan_loader.sh
 etc/firmware/mp_rtl8723b_fw
 etc/firmware/rtl8723b_config
 etc/firmware/rtl8723b_fw
