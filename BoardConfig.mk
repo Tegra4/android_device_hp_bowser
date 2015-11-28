@@ -32,6 +32,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := tegra
+TARGET_TEGRA_VERSION := t114
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
@@ -75,6 +76,7 @@ TARGET_RECOVERY_DEVICE_DIRS += device/hp/bowser
 TARGET_RECOVERY_FSTAB := device/hp/bowser/rootdir/etc/fstab.bowser
 
 # SELinux
+include device/nvidia/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     device/hp/bowser/sepolicy
 
