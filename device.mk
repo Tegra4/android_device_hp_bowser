@@ -120,7 +120,8 @@ PRODUCT_PACKAGES += \
 
 # Synaptics Touchpad
 PRODUCT_PACKAGES += \
-    syntouchpad
+    syntouchpad \
+    syntouchpad_recovery
 
 # USB
 PRODUCT_PACKAGES += \
