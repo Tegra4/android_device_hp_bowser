@@ -119,10 +119,6 @@ lib/libpowerservice_client.so
 lib/libpowerservice.so
 vendor/lib/hw/power.bowser.so
 
-# Rbe
-bin/wlbwservice
-lib/libwlbwservice.so
-
 # Sensors
 lib/hw/sensors.bowser.so
 lib/libinvensense_hal.so

@@ -339,14 +339,6 @@ service powerservice /system/bin/powerservice
     user system
     group system
 
-# Enable rbe
-# thresIncr:50  thresIncrCntMax:6  thresDecr:70  thresDecrCntMax:2
-# The change from default is the thresDecrCntMax.  Default is 3.
-service wlbwservice /system/bin/wlbwservice -t 50 6 70 2
-    class main
-    user system
-    group system inet net_admin
-
 # unified scaling setup
 service ussr_setup /system/bin/ussr_setup.sh
     class main
