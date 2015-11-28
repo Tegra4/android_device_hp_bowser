@@ -333,12 +333,6 @@ service wwanloader /system/bin/wwan_loader.sh
 on property:init.svc.hciattach=stopped
     write /sys/devices/platform/reg-userspace-consumer.1/state disabled
 
-# Enable PowerService
-service powerservice /system/bin/powerservice
-    class main
-    user system
-    group system
-
 # unified scaling setup
 service ussr_setup /system/bin/ussr_setup.sh
     class main
