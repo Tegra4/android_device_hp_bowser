@@ -36,6 +36,9 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=bowser rtl8723bs.ifname=wlan0 rtl87
 TARGET_KERNEL_SOURCE := kernel/hp/bowser
 TARGET_KERNEL_CONFIG := cyanogenmod_bowser_defconfig
 
+# Audio
+TARGET_TINY_ALSA_IGNORE_SILENCE_SIZE := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/hp/bowser/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/hp/bowser/bluetooth/vnd_bowser.txt
