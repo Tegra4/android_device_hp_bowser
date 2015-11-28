@@ -1,2 +1,6 @@
+# camera
+/dev/ov2722				u:object_r:camera_device:s0
+/dev/ov9740				u:object_r:camera_device:s0
+
 # Synaptics Touchpad
-/system/bin/syntouchpad		        u:object_r:syntouchpad_exec:s0
+/system/bin/syntouchpad			u:object_r:syntouchpad_exec:s0
