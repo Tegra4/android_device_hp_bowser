@@ -108,7 +108,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.tegra
+    power.bowser
 
 # Ramdisk
 PRODUCT_PACKAGES += \
