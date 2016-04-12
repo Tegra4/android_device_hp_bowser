@@ -18,8 +18,6 @@ on early-init
 on init
     export LD_SHIM_LIBS "/system/lib/libicuuc.so|libshim_icu.so:/system/lib/hw/camera.tegra.so|libshim_camera.so:/system/vendor/lib/libwvm.so|libshim_wvm.so"
 
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
 on fs
