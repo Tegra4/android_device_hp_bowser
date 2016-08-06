@@ -1,8 +1,37 @@
 #!/bin/bash
+#
+# Copyright (C) 2016 The CyanogenMod Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
 
-#set -e
-export DEVICE=bowser
-export VENDOR=hp
+set -e
+
+DEVICE=bowser
+VENDOR=hp
+
+# Load extractutils and do some sanity checks
+MY_DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+
+CM_ROOT="$MY_DIR"/../../..
+
+HELPER="$CM_ROOT"/vendor/cm/build/tools/extract_utils.sh
+if [ ! -f "$HELPER" ]; then
+    echo "Unable to find helper script at $HELPER"
+    exit 1
+fi
+. "$HELPER"
 
 if [ $# -eq 0 ]; then
   SRC=adb
@@ -20,37 +49,9 @@ else
   fi
 fi
 
-BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
-rm -rf $BASE/*
+# Initialize the helper
+setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
-for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
-  echo "Extracting /system/$FILE ..."
-  OLDIFS=$IFS IFS=":" PARSING_ARRAY=($FILE) IFS=$OLDIFS
-  FILE=`echo ${PARSING_ARRAY[0]} | sed -e "s/^-//g"`
-  DEST=${PARSING_ARRAY[1]}
-  if [ -z $DEST ]
-  then
-    DEST=$FILE
-  fi
-  DIR=`dirname $FILE`
-  if [ ! -d $BASE/$DIR ]; then
-    mkdir -p $BASE/$DIR
-  fi
-  if [ "$SRC" = "adb" ]; then
-    adb pull /system/$FILE $BASE/$DEST
-  # if file dot not exist try destination
-    if [ "$?" != "0" ]
-        then
-        adb pull /system/$DEST $BASE/$DEST
-    fi
-  else
-    cp $SRC/system/$FILE $BASE/$DEST
-    # if file dot not exist try destination
-    if [ "$?" != "0" ]
-        then
-        cp $SRC/system/$DEST $BASE/$DEST
-    fi
-  fi
-done
+extract "$MY_DIR"/proprietary-files.txt "$SRC"
 
-./setup-makefiles.sh
+"$MY_DIR"/setup-makefiles.sh
