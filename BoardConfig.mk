@@ -14,11 +14,6 @@
 # limitations under the License.
 #
 
-# This variable is set first, so it can be overridden
-# by BoardConfigVendor.mk
-
-BOARD_VENDOR := hp
-
 # Architecture
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -75,7 +70,6 @@ TARGET_RECOVERY_DEVICE_DIRS += device/hp/bowser
 TARGET_RECOVERY_FSTAB := device/hp/bowser/rootdir/etc/fstab.bowser
 
 # SELinux
-include device/nvidia/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     device/hp/bowser/sepolicy
 

@@ -93,10 +93,6 @@ lib/libstagefrighthw.so
 lib/libtsechdcp.so
 lib/libtsec_wrapper.so
 
-# GPS
-bin/glgps_nvidiaTegra2android
-lib/hw/gps.broadcom.so
-
 # Graphics firmware
 etc/firmware/tegra11x/nvhost_msenc02.fw
 etc/firmware/tegra11x/nvhost_tsec.fw
@@ -119,15 +115,6 @@ bin/input_cfboost_init.sh
 
 # Power
 vendor/lib/hw/power.bowser.so
-
-# Sensors
-lib/hw/sensors.bowser.so
-lib/libinvensense_hal.so
-lib/libmllite.so
-lib/libmplmpu.so
-lib/libsensors.base.so
-lib/libsensors.cm3218.so
-lib/libsensors.mpl.so
 
 # Trusted Foundation daemon
 bin/tf_daemon

@@ -57,22 +57,9 @@ on fs
 on post-fs-data
     mkdir /data/nvcam 0700 media camera
 
-    mkdir /data/misc/wminput 0776 system system
-
     mkdir /data/media 0770 media_rw media_rw
 
     mkdir /data/data/mediaserver 0700 media media
-
-    mkdir /data/dts 0700 media audio
-
-    # Create GPS folders and set its permissions
-    mkdir /data/gps
-    chown gps system /data/gps/
-    chmod 0770 /data/gps/
-
-    #Change GPS regulator file permission
-    chown system system /sys/class/regulator/regulator.6/state
-    chmod 0660 /sys/class/regulator/regulator.6/state
 
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
@@ -121,149 +108,8 @@ on boot
     chown system system /sys/class/graphics/fb0/device/smartdimmer/sd_window
     chown system system /sys/class/graphics/fb0/device/smartdimmer/sd_window_enable
 
-    # CMU
-    chown system system /sys/class/graphics/fb0/device/cmu_enable
-    chown system system /sys/class/graphics/fb1/device/cmu_enable
-
-    # Power
-    chown system system /sys/kernel/tegra_cap/core_cap_level
-    chown system system /sys/kernel/tegra_cap/core_cap_state
-    chown system system /sys/module/cpu_tegra/parameters/cpu_user_cap
-
-    # Sensor
-    chown system system /sys/bus/iio/devices/iio:device0/als_value
-    chown system system /sys/bus/iio/devices/iio:device0/als_ir_mode
-    chown system system /sys/bus/iio/devices/iio:device0/proximity_value
-    chown system system /sys/bus/iio/devices/iio:device0/proximity_enable
-
-    # Sensor permissions
-    chown system system /dev/iio:device0
-    chmod 0660 /dev/iio:device0
-    chown system system /sys/bus/iio/devices/iio:device0
-    chown system system /sys/bus/iio/devices/trigger0
-    chown system system /sys/bus/iio/devices/iio:device0/accl_enable
-    chown system system /sys/bus/iio/devices/iio:device0/accl_matrix
-    chown system system /sys/bus/iio/devices/iio:device0/buffer
-    chown system system /sys/bus/iio/devices/iio:device0/buffer/enable
-    chown system system /sys/bus/iio/devices/iio:device0/buffer/length
-    chown system system /sys/bus/iio/devices/iio:device0/cal_data_auto_load
-    chown system system /sys/bus/iio/devices/iio:device0/compass_enable
-    chown system system /sys/bus/iio/devices/iio:device0/compass_matrix
-    chown system system /sys/bus/iio/devices/iio:device0/display_orientation_on
-    chown system system /sys/bus/iio/devices/iio:device0/dmp_event_int_on
-    chown system system /sys/bus/iio/devices/iio:device0/dmp_firmware
-    chown system system /sys/bus/iio/devices/iio:device0/dmp_int_on
-    chown system system /sys/bus/iio/devices/iio:device0/dmp_on
-    chown system system /sys/bus/iio/devices/iio:device0/dmp_output_rate
-    chown system system /sys/bus/iio/devices/iio:device0/event_accel_motion
-    chown system system /sys/bus/iio/devices/iio:device0/event_display_orientation
-    chown system system /sys/bus/iio/devices/iio:device0/event_tap
-    chown system system /sys/bus/iio/devices/iio:device0/firmware_loaded
-    chown system system /sys/bus/iio/devices/iio:device0/gyro_enable
-    chown system system /sys/bus/iio/devices/iio:device0/gyro_matrix
-    chown system system /sys/bus/iio/devices/iio:device0/in_accel_scale
-    chown system system /sys/bus/iio/devices/iio:device0/in_accel_x_calibbias
-    chown system system /sys/bus/iio/devices/iio:device0/in_accel_x_offset
-    chown system system /sys/bus/iio/devices/iio:device0/in_accel_x_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_accel_y_calibbias
-    chown system system /sys/bus/iio/devices/iio:device0/in_accel_y_offset
-    chown system system /sys/bus/iio/devices/iio:device0/in_accel_y_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_accel_z_calibbias
-    chown system system /sys/bus/iio/devices/iio:device0/in_accel_z_offset
-    chown system system /sys/bus/iio/devices/iio:device0/in_accel_z_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_anglvel_scale
-    chown system system /sys/bus/iio/devices/iio:device0/in_anglvel_x_calibbias
-    chown system system /sys/bus/iio/devices/iio:device0/in_anglvel_x_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_anglvel_y_calibbias
-    chown system system /sys/bus/iio/devices/iio:device0/in_anglvel_y_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_anglvel_z_calibbias
-    chown system system /sys/bus/iio/devices/iio:device0/in_anglvel_z_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_magn_scale
-    chown system system /sys/bus/iio/devices/iio:device0/in_magn_x_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_magn_y_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_magn_z_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_quaternion_r_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_quaternion_x_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_quaternion_y_raw
-    chown system system /sys/bus/iio/devices/iio:device0/in_quaternion_z_raw
-    chown system system /sys/bus/iio/devices/iio:device0/motion_lpa_duration
-    chown system system /sys/bus/iio/devices/iio:device0/motion_lpa_freq
-    chown system system /sys/bus/iio/devices/iio:device0/motion_lpa_on
-    chown system system /sys/bus/iio/devices/iio:device0/motion_lpa_threshold
-    chown system system /sys/bus/iio/devices/iio:device0/name
-    chown system system /sys/bus/iio/devices/iio:device0/pedometer_steps
-    chown system system /sys/bus/iio/devices/iio:device0/pedometer_time
-    chown system system /sys/bus/iio/devices/iio:device0/power_state
-    chown system system /sys/bus/iio/devices/iio:device0/quaternion_on
-    chown system system /sys/bus/iio/devices/iio:device0/reg_dump
-    chown system system /sys/bus/iio/devices/iio:device0/sampling_frequency
-    chown system system /sys/bus/iio/devices/iio:device0/sampling_frequency_available
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_y_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_z_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_anglvel_x_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_anglvel_y_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_anglvel_z_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_magn_x_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_magn_y_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_magn_z_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_quaternion_r_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_quaternion_x_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_quaternion_y_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_quaternion_z_en
-    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_timestamp_en
-    chown system system /sys/bus/iio/devices/iio:device0/self_test
-    chown system system /sys/bus/iio/devices/iio:device0/tap_min_count
-    chown system system /sys/bus/iio/devices/iio:device0/tap_on
-    chown system system /sys/bus/iio/devices/iio:device0/tap_threshold
-    chown system system /sys/bus/iio/devices/iio:device0/tap_time
-    chown system system /sys/bus/iio/devices/iio:device0/temperature
-    chown system system /sys/bus/iio/devices/iio:device0/trigger/current_trigger
-    chown system system /sys/bus/iio/devices/iio:device0/uevent
-
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_accel_scale
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_accel_x_calibbias
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_accel_x_offset
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_accel_y_calibbias
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_accel_y_offset
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_accel_z_calibbias
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_accel_z_offset
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_anglvel_scale
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_anglvel_x_calibbias
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_anglvel_y_calibbias
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_anglvel_z_calibbias
-    chmod 0660 /sys/bus/iio/devices/iio:device0/in_magn_scale
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_y_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_z_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_anglvel_x_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_anglvel_y_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_anglvel_z_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_magn_x_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_magn_y_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_magn_z_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_quaternion_r_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_quaternion_x_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_quaternion_y_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_quaternion_z_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/scan_elements/in_timestamp_en
-    chmod 0660 /sys/bus/iio/devices/iio:device0/buffer/enable
-    chmod 0660 /sys/bus/iio/devices/iio:device0/buffer/length
-    chmod 0660 /sys/bus/iio/devices/iio:device0/trigger/current_trigger
-
     # Touch
     chown system system /sys/class/input/input0/enabled
-
-    # Cpu maximum voltage control settings
-    chown system system /sys/kernel/tegra_cpu_volt_cap/volt
-    chown system system /sys/kernel/tegra_cpu_volt_cap/capping_state
-
-    # Voltage monitor settings
-    chown system system /sys/power/tegra_rail_stats
-
-    # Temperature monitor settings
-    chown system system /sys/class/thermal
 
     # Power management settings
     write /sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/no_lp 0
@@ -289,20 +135,11 @@ on boot
     write /sys/module/cpuidle_t11x/parameters/cpu_power_gating_in_idle 31
     write /sys/module/cpuidle_t11x/parameters/slow_cluster_power_gating_noncpu 1
     write /sys/module/cpuidle/parameters/power_down_in_idle 0
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/go_maxspeed_load
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/max_boost
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    chown system system /sys/devices/tegradc.0/enable
-    chown system system /sys/devices/tegradc.1/enable
     chown system system /sys/devices/platform/host1x/nvavp/boost_sclk
     chown system system /sys/class/input/input0/enabled
-    chown system system /sys/class/input/input1/enabled
-    chown system system /sys/class/input/input2/enabled
 
-    chown system system /sys/kernel/tegra_cap/cbus_cap_level
-    chown system system /sys/kernel/tegra_cap/cbus_cap_state
     chown system system /sys/devices/platform/host1x/gr3d/enable_3d_scaling
-    chown system system /sys/devices/platform/pwm-fan/pwm_cap
 
     # TODO: Remove once powerhal takes over app profiles
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
@@ -310,54 +147,16 @@ on boot
     # Set emc_rate_min permission
     chmod 0644 /sys/devices/platform/tegra-emc/emc_rate_min
 
-    # Nvdps
-    chown system system /sys/class/graphics/fb0/device/nvdps
-
     # Default Read Ahead value for sdcards
     write /sys/block/mmcblk0/queue/read_ahead_kb 2048
     write /sys/block/mmcblk1/queue/read_ahead_kb 2048
 
-    # Wiimote connect status
-    write /data/misc/wminput/connected 0
-    chmod 0666 /data/misc/wminput/connected
-
-    # GPS init
-    write /sys/class/gpio/export 49
-    write /sys/class/gpio/gpio49/value 0
-    write /sys/class/gpio/gpio49/direction out
-    chown root system /sys/class/gpio/gpio49/value
-    chmod 0664 /sys/class/gpio/gpio49/value
-    write /sys/class/gpio/export 56
-    write /sys/class/gpio/gpio56/direction out
-    write /sys/class/gpio/gpio56/value 1
-    chown root system /sys/class/gpio/gpio56/value
-    chmod 0664 /sys/class/gpio/gpio56/value
-
-    # Export WiFi_BT_DET, WWAN_DET, GPS_DET GPIO
-    write /sys/class/gpio/export 130
-    chown root system /sys/class/gpio/gpio130/value
-    chmod 0664 /sys/class/gpio/gpio130/value
-    write /sys/class/gpio/gpio130/direction "in"
-    write /sys/class/gpio/export 132
-    chown root system /sys/class/gpio/gpio132/value
-    chmod 0664 /sys/class/gpio/gpio132/value
-    write /sys/class/gpio/gpio132/direction "in"
-
     # Disable CMU calibration
     write /sys/devices/platform/host1x/tegradc.0/cmu_enable 0
-
-    # Tskin tool
-    chown system system /sys/class/thermal/thermal_zone5/trip_point_0_temp
 
      # start EC firmware flash application
     chown system audio /sys/devices/platform/bowser_misc/set_mute_led
     start bowser_ec_flash
-
-    # Ebda tool
-    chown system system /dev/block/mmcblk0p1
-
-    # To store or recover sensor calibration file
-    chown system system /dev/block/mmcblk0p2
 
 # Switch USB OTG mode depend on property
 on property:usbotg.mode=1
@@ -522,13 +321,6 @@ service tf_daemon /system/bin/tf_daemon -storageDir /data/tf -d
 # may restart due to /data/tf not existing yet
 on property:init.svc.tf_daemon=restarting
     mkdir /data/tf
-
-# Start GPS daemon
-service gps-daemon /system/bin/glgps_nvidiaTegra2android -c /system/etc/gps/gpsconfig.xml
-    class main
-    user gps
-    socket gps seqpacket 0660 gps system
-    group system inet sdcard_rw sdcard_ir
 
 #Set cpu boost with conservative mode when music is playing.
 #Playing music via BT when screen off
