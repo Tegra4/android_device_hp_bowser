@@ -16,6 +16,8 @@ on early-init
     write /sys/class/gpio/gpio131/direction "in"
 
 on init
+    export LD_SHIM_LIBS /system/lib/libicuuc.so|libshim_icu.so
+
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0

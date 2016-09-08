@@ -4,7 +4,7 @@ lib/hw/audio.primary.tegra.so|81e569b6d7d0dc33c55a81f2e723d794e8a841ce
 lib/libnvaudioservice.so|1a9d8e5c3daa981599b54f420223d7015c1da448
 lib/libnvcapaudioservice.so|5a0f8ab9283b2d9f9fc029980ec6858979912b91
 lib/libnvcapclk.so|f2cf817302b995a60ba4ad7859623e87d4eec248
-lib/libnvoice.so|9b549c1a57f9e43a6f6beedc6f5a0c66ebe27f05
+lib/libnvoice.so|926e33720d8aa283d5183e6701575e30a40c238e
 
 # Bowser latop base
 bin/bowser_ec_flash

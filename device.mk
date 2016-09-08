@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
     init.bowser.usb.rc \
     ueventd.bowser.rc
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_icu
+
 # Synaptics Touchpad
 PRODUCT_PACKAGES += \
     syntouchpad \
