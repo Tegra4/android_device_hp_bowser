@@ -37,6 +37,7 @@ TARGET_KERNEL_SOURCE := kernel/hp/bowser
 TARGET_KERNEL_CONFIG := tegra11_bowser_android_defconfig
 
 # Audio
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_TINY_ALSA_IGNORE_SILENCE_SIZE := true
 
 # Bluetooth
