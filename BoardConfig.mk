@@ -78,6 +78,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Recovery
 BOARD_NO_SECURE_DISCARD := true
+TARGET_RECOVERY_DENSITY := hdpi
 TARGET_RECOVERY_DEVICE_DIRS += device/hp/bowser
 TARGET_RECOVERY_FSTAB := device/hp/bowser/rootdir/etc/fstab.bowser
 
