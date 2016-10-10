@@ -93,6 +93,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/HP_Keyboard.kl:system/usr/keylayout/HP_Keyboard.kl \
     $(LOCAL_PATH)/keylayout/Vendor_054c_Product_05c4.kl:system/usr/keylayout/Vendor_054c_Product_05c4.kl
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.tegra
