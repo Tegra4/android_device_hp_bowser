@@ -13,5 +13,8 @@ debug.hwui.render_dirty_regions=false
 # don't preload OpenGL in Zygote, the Tegra drivers do not like it
 ro.zygote.disable_gl_preload=true
 
+# Legacy omx decoder support
+media.stagefright.less-secure=true
+
 # stop ril daemon
 persist.radio.noril=1
