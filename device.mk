@@ -78,6 +78,10 @@ PRODUCT_PACKAGES += \
     gralloc.tegra \
     hwcomposer.tegra
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0-impl
+
 # IDC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/elan-touchscreen.idc:system/usr/idc/elan-touchscreen.idc \
