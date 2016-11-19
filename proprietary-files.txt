@@ -79,7 +79,7 @@ vendor/lib/libnvomx.so|a002bf068a15e086caf29810d36cbcc0898f8d8d
 vendor/lib/libnvos.so|3d191453b35d90e80abf30a268de7eacc3bdbe49
 vendor/lib/libnvparser.so|788d7ef2a34cd24694f86fdc5ffab80fb53c11d0
 vendor/lib/libnvrm_graphics.so|2ee53483ccab293f97e7e60d29224c1bfe3eda69
-vendor/lib/libnvrm.so|b821111252734b7b68696bc229f1a622edf572e5
+-vendor/lib/libnvrm.so|b821111252734b7b68696bc229f1a622edf572e5
 vendor/lib/libnvsm.so|5fc1e2827b826ed4bc194f8f29f4680c5c5ae119
 vendor/lib/libnvtestio.so|97c4463c823c6ab3113213f6c44e410868474f53
 vendor/lib/libnvtestresults.so|8f8747216abcaba2b66520d02f6a200523ee2109
