@@ -120,7 +120,8 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libshim_camera \
-    libshim_icu
+    libshim_icu \
+    libshim_wvm
 
 # Synaptics Touchpad
 PRODUCT_PACKAGES += \
