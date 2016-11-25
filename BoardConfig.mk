@@ -80,10 +80,6 @@ TARGET_RECOVERY_FSTAB := device/hp/bowser/rootdir/etc/fstab.bowser
 BOARD_SEPOLICY_DIRS += \
     device/hp/bowser/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-    file_contexts \
-    syntouchpad.te
-
 # Wifi
 BOARD_WLAN_DEVICE                := rtl
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
