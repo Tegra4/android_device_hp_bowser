@@ -98,7 +98,6 @@ TW_BRIGHTNESS_PATH := "/sys/class/backlight/pwm-backlight/brightness"
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/tegra11-i2c.0/i2c-0/0-000b/power_supply/sbs-0-000b"
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone5/temp"
 TW_EXCLUDE_SUPERSU := true
-TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_SYNTOUCHPAD := true
 TW_NO_SCREEN_TIMEOUT := true
