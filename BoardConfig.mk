@@ -32,7 +32,7 @@ TARGET_BOARD_PLATFORM := tegra
 TARGET_TEGRA_VERSION := t114
 
 # Kernel
-BOARD_KERNEL_CMDLINE := rtl8723bs.ifname=wlan0 rtl8723bs.if2name=p2p0 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=bowser rtl8723bs.ifname=wlan0 rtl8723bs.if2name=p2p0 androidboot.selinux=permissive
 TARGET_KERNEL_SOURCE := kernel/hp/bowser
 TARGET_KERNEL_CONFIG := cyanogenmod_bowser_defconfig
 
