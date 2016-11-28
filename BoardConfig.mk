@@ -36,10 +36,11 @@ TARGET_KERNEL_SOURCE := kernel/hp/bowser
 TARGET_KERNEL_CONFIG := cyanogenmod_bowser_defconfig
 
 # Bluetooth
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_RTL := true
-BOARD_BLUEDROID_VENDOR_CONF := device/hp/bowser/bluetooth/vnd_bowser.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/hp/bowser/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/hp/bowser/bluetooth/vnd_bowser.txt
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_RTK := true
+BLUETOOTH_HCI_USE_RTK_H5 := true
 
 # Graphics
 USE_OPENGL_RENDERER := true
