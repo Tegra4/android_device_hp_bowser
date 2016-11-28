@@ -131,6 +131,5 @@ vendor/bin/usdwatchdog
 vendor/bin/ussrd
 
 # Wifi
-etc/firmware/mp_rtl8723b_fw
-etc/firmware/rtl8723b_config
-etc/firmware/rtl8723b_fw
+etc/firmware/bt/rtl8723b_config
+etc/firmware/bt/rtl8723b_fw
