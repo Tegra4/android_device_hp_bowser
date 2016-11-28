@@ -77,15 +77,11 @@ PRODUCT_COPY_FILES += \
 # IDC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/elan-touchscreen.idc:system/usr/idc/elan-touchscreen.idc \
-    $(LOCAL_PATH)/idc/hid_06CB_0001.idc:system/usr/idc/hid_06CB_0001.idc \
-    $(LOCAL_PATH)/idc/hid_06CB_2239.idc:system/usr/idc/hid_06CB_2239.idc \
     $(LOCAL_PATH)/idc/HP_Keyboard.idc:system/usr/idc/HP_Keyboard.idc \
-    $(LOCAL_PATH)/idc/sensor00fn11.idc:system/usr/idc/sensor00fn11.idc \
     $(LOCAL_PATH)/idc/Synaptics_RMI4_TouchPad_Sensor.idc:system/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/AT_Translated_Set_2_keyboard.kl:system/usr/keylayout/AT_Translated_Set_2_keyboard.kl \
     $(LOCAL_PATH)/keylayout/Bowser_Base_Lid_Switch.kl:system/usr/keylayout/Bowser_Base_Lid_Switch.kl \
     $(LOCAL_PATH)/keylayout/Bowser_Charger_Event.kl:system/usr/keylayout/Bowser_Charger_Event.kl \
     $(LOCAL_PATH)/keylayout/Bowser_KB_Wake_Event.kl:system/usr/keylayout/Bowser_KB_Wake_Event.kl \
