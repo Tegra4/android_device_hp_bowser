@@ -60,4 +60,6 @@
 /dev/constraint_online_cpus 0660 root system
 /dev/quadd	0660	root	root
 /dev/quadd_auth	0660	system	system
-/dev/bowser_misc		0660	system	system
+/dev/bowser_misc 0660	system	system
+# Rfkill
+/dev/rfkill      0660   bluetooth  system
