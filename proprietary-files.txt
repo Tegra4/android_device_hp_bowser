@@ -30,6 +30,7 @@ vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # Graphics
+bin/nvcgcserver
 etc/enctune.conf
 lib/egl/libEGL_tegra_impl.so
 lib/egl/libEGL_tegra.so
