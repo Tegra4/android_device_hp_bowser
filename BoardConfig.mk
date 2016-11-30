@@ -91,6 +91,10 @@ WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_rtl
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_rtl
+WIFI_DRIVER_FW_PATH_PARAM        := ""
+WIFI_DRIVER_MODULE_NAME          := "rtl8723bs"
+WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/rtl8723bs.ko"
+WIFI_DRIVER_MODULE_ARG           := "ifname=wlan0 if2name=p2p0"
 
 TW_THEME := landscape_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
