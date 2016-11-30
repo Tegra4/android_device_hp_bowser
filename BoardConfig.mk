@@ -32,7 +32,7 @@ TARGET_BOARD_PLATFORM := tegra
 TARGET_TEGRA_VERSION := t114
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := rtl8723bs.ifname=wlan0 rtl8723bs.if2name=p2p0 androidboot.selinux=permissive
 TARGET_KERNEL_SOURCE := kernel/hp/bowser
 TARGET_KERNEL_CONFIG := cyanogenmod_bowser_defconfig
 
@@ -92,9 +92,6 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_rtl
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_rtl
 WIFI_DRIVER_FW_PATH_PARAM        := ""
-WIFI_DRIVER_MODULE_NAME          := "rtl8723bs"
-WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/rtl8723bs.ko"
-WIFI_DRIVER_MODULE_ARG           := "ifname=wlan0 if2name=p2p0"
 
 TW_THEME := landscape_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
