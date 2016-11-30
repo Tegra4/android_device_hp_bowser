@@ -154,9 +154,6 @@ on boot
     # Disable CMU calibration
     write /sys/devices/platform/host1x/tegradc.0/cmu_enable 0
 
-    # Load WiFi driver
-    insmod /system/lib/modules/cfg80211.ko
-
      # start EC firmware flash application
     chown system audio /sys/devices/platform/bowser_misc/set_mute_led
     start bowser_ec_flash
