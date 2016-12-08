@@ -33,6 +33,7 @@ TARGET_TEGRA_VERSION := t114
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=bowser rtl8723bs.ifname=wlan0 rtl8723bs.if2name=p2p0 androidboot.selinux=permissive
+LZMA_RAMDISK_TARGETS := boot,recovery
 TARGET_KERNEL_SOURCE := kernel/hp/bowser
 TARGET_KERNEL_CONFIG := tegra11_bowser_android_defconfig
 
@@ -76,7 +77,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 #TARGET_POWERHAL_VARIANT := tegra
 
 # Recovery
-BOARD_CUSTOM_BOOTIMG_MK := device/hp/bowser/shbootimg.mk
 BOARD_NO_SECURE_DISCARD := true
 TARGET_RECOVERY_DEVICE_DIRS += device/hp/bowser
 TARGET_RECOVERY_FSTAB := device/hp/bowser/rootdir/etc/fstab.bowser
