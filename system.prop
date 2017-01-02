@@ -5,7 +5,7 @@ ap.interface=wlan0
 persist.tegra.nvmmlite = 1
 
 # use glcomposer as the default compositor
-persist.tegra.compositor=surfaceflinger
+persist.tegra.compositor=glcomposer
 
 # support changing conservative governor when audio is playing in early suspend
 media.audio.screen_off_playing=0
