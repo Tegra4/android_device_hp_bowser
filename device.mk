@@ -122,10 +122,6 @@ PRODUCT_PACKAGES += \
     syntouchpad \
     syntouchpad_recovery
 
-# USB
-PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
-
 # Wifi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
