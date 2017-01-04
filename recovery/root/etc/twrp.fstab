@@ -7,3 +7,5 @@
 /metadata       emmc            /dev/block/platform/sdhci-tegra.3/by-name/MDA
 /data           ext4            /dev/block/platform/sdhci-tegra.3/by-name/UDA
 /external_sd    vfat            /dev/block/platform/sdhci-tegra.2/by-num/p1      /dev/block/platform/sdhci-tegra.2/mmcblk1  flags=display="Micro SDcard";storage;wipeingui;removable
+/usbstorage1    vfat            /dev/block/sda1	                                 /dev/block/sda	                                                    flags=display="USB Storage 1";storage;wipeingui;removable
+/usbstorage2    vfat            /dev/block/sdb1	                                 /dev/block/sdb	                                                    flags=display="USB Storage 2";storage;wipeingui;removable
