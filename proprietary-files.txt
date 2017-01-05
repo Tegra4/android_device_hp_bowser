@@ -23,13 +23,12 @@ lib/libopencv24_tegra.so|0ef07e3387e3c818c0d3d806dc496c8c2b461614
 lib/libtbb.so|5a5736854272582bd8c0634eb44e6817d12ea872
 
 # DRM
-#lib/libdrmdecrypt.so
-#lib/liboemcrypto.so
-#vendor/lib/drm/libdrmwvmplugin.so
-#vendor/lib/libwvdrm_L1.so
-#vendor/lib/libwvm.so
-#vendor/lib/libWVStreamControlAPI_L1.so
-#vendor/lib/mediadrm/libwvdrmengine.so
+lib/libdrmdecrypt.so|e33c6f9b80ed5198922f55a46d94e0eae353ffcd
+lib/liboemcrypto.so|ce558f6d7ea6e41066d54715a221ea46851490bd
+vendor/lib/libwvdrm_L1.so|b7d969ae21f9f4619b8b7892193bfea32c24f36e
+vendor/lib/libwvm.so|bdef4c40e9b18d650069c35f3a55686a71483824
+vendor/lib/libWVStreamControlAPI_L1.so|1208e372c173d3d06cdeb386e404e96354391048
+vendor/lib/mediadrm/libwvdrmengine.so|07b9c17e55a334a7042b5925eba3a6099a657bec
 
 # Graphics
 etc/enctune.conf|7423d6c9fb60149a0984910424e602cfd9120901
