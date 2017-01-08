@@ -36,7 +36,7 @@ static int open_sensors(const struct hw_module_t* module, const char* id,
                         struct hw_device_t** device);
 
 
-static int sensors__get_sensors_list(struct sensors_module_t* module,
+static int sensors__get_sensors_list(struct sensors_module_t* module __unused,
                                      struct sensor_t const** list)
 {
     *list = sSensorList;
@@ -343,7 +343,7 @@ static int poll__poll(struct sensors_poll_device_t *dev,
 /*****************************************************************************/
 
 /** Open a new instance of a sensor device using name */
-static int open_sensors(const struct hw_module_t* module, const char* id,
+static int open_sensors(const struct hw_module_t* module, const char* id __unused,
                         struct hw_device_t** device)
 {
     VFUNC_LOG;
