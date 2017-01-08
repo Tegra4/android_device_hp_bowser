@@ -122,9 +122,6 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    libsensors.base \
-    libsensors.mpl \
-    libsensors.nvs_input \
     sensors.bowser
 
 # Shims
