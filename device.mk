@@ -115,6 +115,8 @@ PRODUCT_PACKAGES += \
     fstab.bowser \
     init.bowser.rc \
     init.bowser.usb.rc \
+    init.tf.rc \
+    init.ussrd.rc \
     ueventd.bowser.rc
 
 # Shims

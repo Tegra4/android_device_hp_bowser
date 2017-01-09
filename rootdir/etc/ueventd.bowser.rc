@@ -1,4 +1,4 @@
-/dev/tegra-throughput	0660	system	system
+/dev/tegra-throughput	0666	system	system
 /dev/knvmap     0660    system  system
 /dev/nvmap      0666    system  system
 /dev/tegra_avp  0660    media   media
@@ -8,10 +8,8 @@
 /dev/tegra_sema	0660    media   media
 /dev/tegra_mediaserver  0660    media   media
 /dev/ov2722     0660    media   camera
-/dev/imx091     0660    media   camera
-/dev/ov9740     0660    media   camera
-/dev/tegra_camera 0660  media   camera
-/dev/camera*    0660    media   camera
+/dev/tegra_camera 0660  system   camera
+/dev/camera*    0660    system   camera
 /dev/focuser*   0660    media   camera
 /dev/torch*     0660    media   camera
 /dev/video0     0660    media   camera
@@ -20,7 +18,7 @@
 /dev/spdif*     0660    system  audio
 /dev/tegra_dc*  0660    system  system
 /dev/ttyACM*    0660    radio   system
-/dev/ttyACM2    0660    radio   log
+/dev/ttyACM2    0660    system  audio
 /dev/nvhdcp0    0666    system  system
 /dev/nvhdcp1    0660    system  system
 /dev/nvhost-ctrl	0666	root	root
@@ -54,12 +52,23 @@
 /dev/emc_freq_max	0660	system	system
 /dev/gpu_freq_min	0660	system	system
 /dev/gpu_freq_max	0660	system	system
-# pmqos
-/dev/constraint_cpu_freq 0660 root system
-/dev/constraint_gpu_freq 0660 root system
-/dev/constraint_online_cpus 0660 root system
-/dev/quadd	0660	root	root
+/dev/quadd	0660	shell	shell
 /dev/quadd_auth	0660	system	system
+
+# cpu cores
+/sys/devices/system/cpu/cpu*/cpuquiet/active 0664 system system
+/sys/devices/system/cpu/cpu*/cpufreq/scaling_governor 0664 system system
+/sys/devices/system/cpu/cpu*/cpufreq/scaling_setspeed 0664 system system
+/sys/devices/system/cpu/cpu*/cpufreq/scaling_available_frequencies 0444 system system
+/sys/devices/system/cpu/cpu*/cpufreq/cpuinfo_cur_freq 0444 system system
+
+# gr3d nodes
+/sys/devices/platform/host1x/gr3d/freq_request          0664 system system
+/sys/devices/platform/host1x/gr3d/user                  0664 system system
+/sys/devices/platform/host1x/gr3d/devfreq/gr3d/cur_freq 0444 system system
+
+# Bowser Misc
 /dev/bowser_misc 0660	system	system
+
 # Rfkill
 /dev/rfkill      0660   bluetooth  system
