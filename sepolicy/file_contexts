@@ -1,0 +1,53 @@
+# Copyright (c) 2014-2015, NVIDIA CORPORATION.  All rights reserved.
+# Copyright (c) 2017, The LineageOS Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Bluetooth
+/dev/ttyHS2						u:object_r:hci_attach_dev:s0
+
+# Camera devices
+/dev/camera.pcl						u:object_r:camera_device:s0
+/dev/nvhost-vi.*					u:object_r:camera_device:s0
+/dev/nvhost-msenc					u:object_r:camera_device:s0
+/dev/ov2722						u:object_r:camera_device:s0
+/dev/mipi-cal						u:object_r:camera_device:s0
+
+# Camera data
+/data/nvcam(/.*)?					u:object_r:nv_camera_data_file:s0
+
+# GPU
+/dev/nvhost-ctrl					u:object_r:gpu_device:s0
+/dev/nvhost-gr2d					u:object_r:gpu_device:s0
+/dev/nvhost-gr3d					u:object_r:gpu_device:s0
+/dev/nvmap						u:object_r:gpu_device:s0
+/dev/knvmap						u:object_r:gpu_device:s0
+
+# PHS
+/data/misc/phs(/.*)?					u:object_r:phsd_data:s0
+/dev/socket/phsd					u:object_r:phsd_socket:s0
+/sys/devices/virtual/misc/tegra-throughput/fps		u:object_r:sysfs_throughput:s0
+/system/bin/ussr_setup.sh				u:object_r:ussr_setup_exec:s0
+/system/vendor/bin/ussrd				u:object_r:ussrd_exec:s0
+
+# Usdwatchdog
+/system/vendor/bin/usdwatchdog				u:object_r:usdwatchdog_exec:s0
+
+# Synaptics Touchpad
+/system/bin/syntouchpad					u:object_r:syntouchpad_exec:s0
+
+# Throughput
+/dev/tegra-throughput					u:object_r:throughput_device:s0
+
+# Tsec
+/dev/nvhost-tsec					u:object_r:tsec_device:s0

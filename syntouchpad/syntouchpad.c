@@ -37,7 +37,7 @@
 #define SYN_MAX_KEYBOARDS	32
 #define SYN_MAX_TOUCHPADS	32
 
-#define SYN_TOUCHPAD_MANAGER_DIR "/data/system"
+#define SYN_TOUCHPAD_MANAGER_DIR "/data/misc"
 #define SYN_TOUCHPAD_MANAGER_FILE SYN_TOUCHPAD_MANAGER_DIR "/syntouchpad"
 
 #define SYNAPTICS_VENDOR	0x06CB
@@ -94,7 +94,7 @@ void find_keyboards(unsigned int * keyboards, int * index)
 	}
 
 	memset(keyBitmask, 0, sizeof(keyBitmask));
-	
+
 	event_dir = opendir("/dev/input");
 	if (!event_dir)
 		return;
@@ -106,11 +106,11 @@ void find_keyboards(unsigned int * keyboards, int * index)
 			if (fd < 0) {
 				continue;
 			}
-			
+
 			ioctl(fd, EVIOCGBIT(EV_KEY, sizeof(keyBitmask)), keyBitmask);
 			if (contains_nonzero_byte(keyBitmask, 0, (BTN_MISC + 7) / 8)
 				|| contains_nonzero_byte(keyBitmask, (KEY_OK + 7) / 8,
-								(KEY_MAX + 1 + 7) / 8)) 
+								(KEY_MAX + 1 + 7) / 8))
 			{
 				/* Is a keyboard */
 				keyboards[*index] = fd;
@@ -166,7 +166,7 @@ void update_palm_check_setting(struct touchpad_data * tpd, int palm_check_settin
 	int count;
 
 	if (palm_check_setting < 0 && palm_check_setting > 7)
-		return; 
+		return;
 
 	tpd->timeout = palm_check_keypress_timeouts[palm_check_setting] * 1000;
 	count = snprintf(buff, 256, "%d", palm_check_highw[palm_check_setting]);
@@ -237,7 +237,7 @@ int open_device_control_file(int * fd, const char * pathname)
 
 	for (i = 0; i < 10; ++i) {
 		*fd = open(pathname, O_WRONLY);
-		if (*fd < 0) { 
+		if (*fd < 0) {
 			fprintf(stderr, "open %s failed: %s\n", pathname, strerror(errno));
 			if (errno == ENOENT) {
 				ts.tv_sec = 0;
