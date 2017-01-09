@@ -1,10 +1,10 @@
-#Copyright (c) 2011-2013 NVIDIA Corporation.  All Rights Reserved.
+# Copyright (c) 2011-2013 NVIDIA Corporation.  All Rights Reserved.
 #
-#NVIDIA Corporation and its licensors retain all intellectual property and
-#proprietary rights in and to this software and related documentation.  Any
-#use, reproduction, disclosure or distribution of this software and related
-#documentation without an express license agreement from NVIDIA Corporation
-#is strictly prohibited.
+# NVIDIA Corporation and its licensors retain all intellectual property and
+# proprietary rights in and to this software and related documentation.  Any
+# use, reproduction, disclosure or distribution of this software and related
+# documentation without an express license agreement from NVIDIA Corporation
+# is strictly prohibited.
 
 import init.bowser.usb.rc
 
@@ -27,8 +27,6 @@ on fs
 
 on post-fs-data
     mkdir /data/nvcam 0700 media camera
-
-    mkdir /data/data/mediaserver 0700 media media
 
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
@@ -199,9 +197,12 @@ on boot
     chmod 0660 /sys/bus/iio/devices/iio:device0/buffer/length
     chmod 0660 /sys/bus/iio/devices/iio:device0/trigger/current_trigger
 
-
     # Touch
     chown system system /sys/class/input/input0/enabled
+
+    # Temperature monitor settings
+    chown system system /sys/class/thermal
+    chown system system /sys/class/thermal/thermal_zone5/trip_point_0_temp
 
     # Power management settings
     write /sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/no_lp 0
@@ -211,30 +212,30 @@ on boot
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor conservative
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor conservative
 
-    write /sys/devices/system/cpu/cpufreq/conservative/up_threshold 95
-    write /sys/devices/system/cpu/cpufreq/conservative/down_threshold 50
-    write /sys/devices/system/cpu/cpufreq/conservative/freq_step 3
+    write /sys/devices/system/cpu/cpufreq/conservative/down_threshold 65
+    write /sys/devices/system/cpu/cpufreq/conservative/freq_step 1
+    write /sys/devices/system/cpu/cpufreq/conservative/up_threshold 85
 
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpufreq/interactive/boost_factor 2
+    write /sys/devices/system/cpu/cpufreq/interactive/io_busy_threshold 16
+    write /sys/devices/system/cpu/cpufreq/interactive/max_boost 250000
+    write /sys/devices/system/cpu/cpufreq/interactive/midrange_max_boost 250000
     write /sys/devices/system/cpu/cpufreq/interactive/sustain_load 80
-    write /sys/devices/system/cpu/cpufreq/interactive/io_busy_threshold 4
-    write /sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/enable 1
     write /sys/devices/system/cpu/cpuquiet/current_governor runnable
+    write /sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/enable 1
+    write /sys/module/cpuidle/parameters/power_down_in_idle 1
     write /sys/module/cpuidle_t11x/parameters/cpu_power_gating_in_idle 31
     write /sys/module/cpuidle_t11x/parameters/slow_cluster_power_gating_noncpu 1
-    write /sys/module/cpuidle/parameters/power_down_in_idle 0
-    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    chown system system /sys/devices/platform/host1x/nvavp/boost_sclk
+
     chown system system /sys/class/input/input0/enabled
-
     chown system system /sys/devices/platform/host1x/gr3d/enable_3d_scaling
-
-    # TODO: Remove once powerhal takes over app profiles
-    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    chown system system /sys/devices/platform/host1x/nvavp/boost_sclk
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/no_lp
 
     # Set emc_rate_min permission
     chmod 0644 /sys/devices/platform/tegra-emc/emc_rate_min
@@ -250,6 +251,12 @@ on boot
     chown system audio /sys/devices/platform/bowser_misc/set_mute_led
     start bowser_ec_flash
 
+    # increase idle_bottom_freq in order for LP core to get a more chance to run
+    write /sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/idle_bottom_freq 408000
+
+    write /sys/module/input_cfboost/parameters/boost_freq 1122000
+    write /sys/module/input_cfboost/parameters/boost_time 160
+
 # Switch USB OTG mode depend on property
 on property:usbotg.mode=1
     write /sys/devices/platform/tegra-otg/enable_host 1
@@ -264,24 +271,11 @@ on property:ro.debuggable=1
 on property:init.svc.hciattach=stopped
     write /sys/devices/platform/reg-userspace-consumer.1/state disabled
 
+# Prepare TF service
+import init.tf.rc
+
 # unified scaling setup
-service ussr_setup /system/bin/ussr_setup.sh
-    class main
-    user root
-    group root
-    oneshot
-
-# unified scaling process
-service ussrd /system/vendor/bin/ussrd
-    user system
-    group system
-    class main
-
-# unified scaling watchdog process
-service usdwatchdog /system/vendor/bin/usdwatchdog --wait 30
-    user system
-    group system
-    class main
+import init.ussrd.rc
 
 service dns_masq /system/bin/dnsmasq --no-daemon --no-resolv --no-poll --dhcp-option-force=43,ANDROID_METERED --dhcp-range=192.168.42.2,192.168.42.254,1h &
     class main
@@ -347,13 +341,6 @@ service bowser_ec_flash /system/bin/bowser_ec_flash
     oneshot
     disabled
 
-# CPU Boost: boost CPU on input events
-service input-cfboost /system/bin/input_cfboost_init.sh
-    class main
-    user root
-    group root
-    oneshot
-
 # Synaptics Touchpad
 service syntouchpad /system/bin/syntouchpad
     class main
@@ -363,13 +350,3 @@ on property:persist.sys.tskin=1
 
 on property:persist.sys.tskin=0
     write /sys/class/thermal/thermal_zone5/trip_point_0_temp 60000
-
-# start tf_daemon service
-service tf_daemon /system/bin/tf_daemon -storageDir /data/tf -d
-    class main
-    user root
-    group shell
-
-# may restart due to /data/tf not existing yet
-on property:init.svc.tf_daemon=restarting
-    mkdir /data/tf
