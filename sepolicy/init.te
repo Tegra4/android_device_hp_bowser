@@ -1,0 +1,2 @@
+allow init debugfs:file write;
+allow init sysfs_syntouchpad:lnk_file read;

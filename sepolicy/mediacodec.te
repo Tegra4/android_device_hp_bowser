@@ -1,0 +1,8 @@
+# needed to load libnvmmlite_audio.so (text relocations)
+allow mediacodec system_file:file execmod;
+
+# NV camera device
+allow mediacodec nv_camera_device:chr_file { ioctl open read write };
+
+# Tegra Fuse
+allow mediacodec tegra_fuse_device:file { open read };

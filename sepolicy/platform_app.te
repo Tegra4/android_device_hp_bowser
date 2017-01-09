@@ -1,0 +1,2 @@
+# Tegra Fuse
+allow platform_app tegra_fuse_device:file { open read };

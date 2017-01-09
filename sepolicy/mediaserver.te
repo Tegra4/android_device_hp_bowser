@@ -1,0 +1,18 @@
+# needed to load libnvmmlite_audio.so (text relocations)
+allow mediaserver system_file:file execmod;
+
+# Allow mediaserver read write and connect access to system_server
+# It needs to access the sensors as video stabilization uses
+# the sensor data
+allow mediaserver system_server:unix_stream_socket { read write connectto };
+
+# Allow mediaserver to access sensor service to get orientation and
+# video stabilization data.
+allow mediaserver sensorservice_service:service_manager find;
+
+# Tegra Fuse
+allow mediaserver tegra_fuse_device:file { open read };
+
+# Thermal
+allow mediaserver sysfs_thermal:dir search;
+allow mediaserver sysfs_thermal:file { getattr open read };

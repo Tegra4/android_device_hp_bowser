@@ -1,0 +1,5 @@
+# Tegra Fuse
+allow system_app tegra_fuse_device:file { open read };
+
+# Throughput
+allow system_app throughput_device:chr_file { ioctl open read write };

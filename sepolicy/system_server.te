@@ -1,0 +1,15 @@
+# Bowser Misc
+allow system_server bowser_misc_device:chr_file { ioctl open read write };
+
+# PMQos
+allow system_server pmqos_device:chr_file rw_file_perms;
+
+# Syntouchpad
+allow system_server sysfs_syntouchpad:dir search;
+allow system_server sysfs_syntouchpad:lnk_file read;
+
+# Tegra Fuse
+allow system_server tegra_fuse_device:file { open read };
+
+# Throughput
+allow system_server throughput_device:chr_file { ioctl open read write };

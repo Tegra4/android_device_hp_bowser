@@ -1,0 +1,4 @@
+allow audioserver self:netlink_kobject_uevent_socket create_socket_perms;
+allow audioserver init:unix_stream_socket connectto;
+allow audioserver mediaserver_service:service_manager add;
+allow audioserver property_socket:sock_file write;

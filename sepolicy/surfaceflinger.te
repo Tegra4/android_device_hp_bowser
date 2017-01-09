@@ -1,0 +1,5 @@
+# Smartdimmer
+allow surfaceflinger sysfs_smartdimmer:file { open read write };
+
+# Tegra Fuse
+allow surfaceflinger tegra_fuse_device:file { open read };

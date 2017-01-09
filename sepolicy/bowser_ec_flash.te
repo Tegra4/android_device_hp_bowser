@@ -1,0 +1,8 @@
+type bowser_ec_flash, domain;
+type bowser_ec_flash_exec, exec_type, file_type;
+
+init_daemon_domain(bowser_ec_flash)
+
+allow bowser_ec_flash property_socket:sock_file write;
+allow bowser_ec_flash init:unix_stream_socket connectto;
+set_prop(bowser_ec_flash, bootanim_prop)
