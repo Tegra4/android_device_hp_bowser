@@ -185,6 +185,7 @@ void common_power_open(struct powerhal_info *pInfo)
     // the interaction boost so that we can maintain is constantly during
     // interaction.
     pInfo->hint_interval[POWER_HINT_INTERACTION] = 90000;
+    pInfo->hint_interval[POWER_HINT_LAUNCH] = 2000000;
 
     // Initialize fds
     pInfo->fds.interactive_max_cpus = -1;
@@ -275,6 +276,21 @@ void common_power_hint(__attribute__ ((unused)) struct power_module *module,
         pInfo->mTimeoutPoker->requestPmQosTimed("/dev/cpu_freq_min",
                                                  pInfo->animation_boost_frequency,
                                                  ms2ns(1200));
+        break;
+    case POWER_HINT_LAUNCH:
+        // Boost to 1.8Ghz all core
+        pInfo->mTimeoutPoker->requestPmQosTimed("dev/cpu_freq_min",
+                                                 1810000,
+                                                 s2ns(3));
+        pInfo->mTimeoutPoker->requestPmQosTimed("dev/min_online_cpus",
+                                                 4,
+                                                 s2ns(3));
+        pInfo->mTimeoutPoker->requestPmQosTimed("/dev/gpu_freq_min",
+                                                 400000,
+                                                 s2ns(3));
+        pInfo->mTimeoutPoker->requestPmQosTimed("/dev/emc_freq_min",
+                                                 624000,
+                                                 s2ns(3));
         break;
     default:
         ALOGE("Unknown power hint: 0x%x", hint);
