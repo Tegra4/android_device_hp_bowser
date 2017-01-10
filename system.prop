@@ -7,8 +7,8 @@ persist.tegra.nvmmlite = 1
 # use glcomposer as the default compositor
 persist.tegra.compositor=glcomposer
 
-# disable EGL_BUFFER_PRESERVED extension for OpenGLRenderer
-debug.hwui.render_dirty_regions=false
+# disable scissor optimization
+ro.hwui.disable_scissor_opt=true
 
 # don't preload OpenGL in Zygote, the Tegra drivers do not like it
 ro.zygote.disable_gl_preload=true
