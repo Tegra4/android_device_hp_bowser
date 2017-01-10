@@ -94,10 +94,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     keystore.tegra
 
-# Lights
-PRODUCT_PACKAGES += \
-    lights.bowser
-
 # Media config
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
