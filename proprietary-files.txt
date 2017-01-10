@@ -108,6 +108,7 @@ etc/hdcpsrm/hdcp2xtest.srm
 -lib/libtf_crypto_sst.so|2b872e39a7345099514aa3c3dfbbd53b1c2af1d9
 
 # Sensors
+lib/hw/lights.bowser.so|e1e8dfff4445e89d94e09264950ad9a17fd01c94
 -lib/libinvensense_hal.so|11264494566d585cdb234f1f70dfed51d794aeeb
 -lib/libmplmpu.so|08c297b8c926092b65f99aaa14c2f606d45d1ad5
 
