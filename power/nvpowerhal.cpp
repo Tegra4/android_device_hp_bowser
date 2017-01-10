@@ -292,6 +292,8 @@ void common_power_hint(__attribute__ ((unused)) struct power_module *module,
                                                  624000,
                                                  s2ns(3));
         break;
+    case POWER_HINT_CPU_BOOST:
+        break;
     default:
         ALOGE("Unknown power hint: 0x%x", hint);
         break;
