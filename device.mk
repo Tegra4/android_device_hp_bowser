@@ -39,10 +39,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
-# Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=240
+PRODUCT_AAPT_CONFIG := normal large xlarge
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 
 PRODUCT_CHARACTERISTICS := tablet
 
