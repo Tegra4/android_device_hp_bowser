@@ -109,8 +109,6 @@ etc/hdcpsrm/hdcp2xtest.srm
 
 # Sensors
 lib/hw/lights.bowser.so|e1e8dfff4445e89d94e09264950ad9a17fd01c94
--lib/libinvensense_hal.so|11264494566d585cdb234f1f70dfed51d794aeeb
--lib/libmplmpu.so|08c297b8c926092b65f99aaa14c2f606d45d1ad5
 
 # Stlport
 lib/libstlport.so|005b9e9455cc0a5a9d5b043258a3d148666c2308

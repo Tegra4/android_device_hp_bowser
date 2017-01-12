@@ -32,8 +32,7 @@ LOCAL_C_INCLUDES += hardware/nvidia/sensors/mlsdk/mllite
 LOCAL_C_INCLUDES += hardware/nvidia/sensors/mlsdk/mllite/linux
 LOCAL_C_INCLUDES += hardware/nvidia/sensors/mlsdk/mpl
 LOCAL_SHARED_LIBRARIES := liblog libcutils libutils libdl libsensors.base \
-                           libinvensense_hal libsensors.mpl \
-
+                          libsensors.mpl
 LOCAL_CPPFLAGS+=-DLINUX=1
 LOCAL_MODULE_RELATIVE_PATH := hw
 
