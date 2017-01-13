@@ -126,8 +126,3 @@ vendor/lib/libgov_cpufs.so|47b06e893caa6f29280f9bd5e54c7d6e00bec1c5
 vendor/lib/libgov_gpufs.so|35e015543fbaf44a6a5bd0333bbaf2e3ff097757
 vendor/lib/libgov_tbc.so|d6c8d712579d05fdf203d75ebb93fb211b13d7bb
 vendor/lib/libussrd.so|64e3ae50d18be9c08110ab2c24541e4e988f98bf
-
-# Wifi
-etc/firmware/mp_rtl8723b_fw
-etc/firmware/rtl8723b_config
-etc/firmware/rtl8723b_fw
