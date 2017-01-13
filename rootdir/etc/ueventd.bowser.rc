@@ -69,6 +69,3 @@
 
 # Bowser Misc
 /dev/bowser_misc 0660	system	system
-
-# Rfkill
-/dev/rfkill      0660   bluetooth  system

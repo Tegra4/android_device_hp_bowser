@@ -42,10 +42,10 @@ TARGET_TINY_ALSA_IGNORE_SILENCE_SIZE := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/hp/bowser/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/hp/bowser/bluetooth/vnd_bowser.txt
+BOARD_CUSTOM_BT_CONFIG := device/hp/bowser/bluetooth/vnd_bowser.txt
+BOARD_GLOBAL_CFLAGS += -DRTL_8723BS_BT_USED
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_RTK := true
-BLUETOOTH_HCI_USE_RTK_H5 := true
 
 # Camera
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
