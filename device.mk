@@ -76,6 +76,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/camera_overrides_front.isp:system/etc/camera_overrides_front.isp \
     $(LOCAL_PATH)/camera/model_frontal.xml:system/etc/model_frontal.xml
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
+
 # Core
 PRODUCT_PACKAGES += \
    libnvapputil \
