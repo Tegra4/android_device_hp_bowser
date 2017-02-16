@@ -110,7 +110,6 @@ PRODUCT_PACKAGES += \
     init.bowser.rc \
     init.bowser.usb.rc \
     init.tf.rc \
-    init.ussrd.rc \
     ueventd.bowser.rc
 
 # Shims

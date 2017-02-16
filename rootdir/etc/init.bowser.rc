@@ -144,9 +144,6 @@ on property:init.svc.hciattach=stopped
 # Prepare TF service
 import init.tf.rc
 
-# unified scaling setup
-import init.ussrd.rc
-
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \

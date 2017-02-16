@@ -115,14 +115,3 @@ lib/libstlport.so|005b9e9455cc0a5a9d5b043258a3d148666c2308
 
 # Trusted Foundation daemon
 bin/tf_daemon|c15b12d95c8483b7b91ff81c6de0826ec296db3d
-
-# Unified scaling
-bin/ussr_setup.sh|f43e0945c120bc0208019a1fca659b29cadcd917
-vendor/bin/usdwatchdog|ea0fe0f3cd3001bfe9c34f3fdcd83e722ebd3402
-vendor/bin/ussrd|fed264e86989bcdc55f74921565a45b56ef39864
-vendor/lib/libgov_combinator.so|0863b9e85252563b6ea00867de756179a072d950
-vendor/lib/libgov_cores.so|bb9f0c12ca0cc88c4c36aec4fc352ee40a6ac1fb
-vendor/lib/libgov_cpufs.so|47b06e893caa6f29280f9bd5e54c7d6e00bec1c5
-vendor/lib/libgov_gpufs.so|35e015543fbaf44a6a5bd0333bbaf2e3ff097757
-vendor/lib/libgov_tbc.so|d6c8d712579d05fdf203d75ebb93fb211b13d7bb
-vendor/lib/libussrd.so|64e3ae50d18be9c08110ab2c24541e4e988f98bf
