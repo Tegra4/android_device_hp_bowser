@@ -5,7 +5,7 @@ ap.interface=wlan0
 persist.tegra.nvmmlite = 1
 
 # use glcomposer as the default compositor
-persist.tegra.compositor=glcomposer
+persist.tegra.compositor=surfaceflinger
 
 # disable scissor optimization
 ro.hwui.disable_scissor_opt=true

@@ -1,10 +1,10 @@
 # Audio
-lib/hw/audio_policy.tegra.so|66aba85846db9e0fcb82b8437e7e683455b203fb
-lib/hw/audio.primary.tegra.so|81e569b6d7d0dc33c55a81f2e723d794e8a841ce
-lib/libnvaudioservice.so|1a9d8e5c3daa981599b54f420223d7015c1da448
-lib/libnvcapaudioservice.so|5a0f8ab9283b2d9f9fc029980ec6858979912b91
-lib/libnvcapclk.so|f2cf817302b995a60ba4ad7859623e87d4eec248
-lib/libnvoice.so|926e33720d8aa283d5183e6701575e30a40c238e
+lib/hw/audio_policy.tegra.so
+lib/hw/audio.primary.tegra.so
+lib/libnvaudioservice.so
+lib/libnvcapaudioservice.so
+lib/libnvcapclk.so
+lib/libnvoice.so
 
 # Bowser latop base
 bin/bowser_ec_flash
@@ -13,14 +13,12 @@ etc/firmware/bowser_ec_hpsign.bin
 etc/firmware/OfficialPubKey.bin
 
 # Camera
-lib/hw/camera.tegra.so|9c0452777270270eb2bd3e061d86b0452f099e1e
-lib/libfcamdng.so|91feabe5cd64ac92406a85bef6b592ea38008ee3
-lib/libnvcamerahdr.so|19369bb984c203fb3c15047a6765efa90195ff09
-lib/libnvcam_imageencoder.so|fea3a14526f430ca00ef3debcb458b6135deffbc
-lib/libnvmm_camera.so|1220de8899f73436156a475ae2b16a7e34734b9c
-lib/libnvodm_imager.so|cb4c276351ffdf4e5c1697e5b1df2e60c6d57ba4
-lib/libopencv24_tegra.so|0ef07e3387e3c818c0d3d806dc496c8c2b461614
-lib/libtbb.so|5a5736854272582bd8c0634eb44e6817d12ea872
+lib/hw/camera.tegra.so
+lib/libfcamdng.so
+lib/libnvcamerahdr.so
+lib/libnvcam_imageencoder.so
+lib/libopencv24_tegra.so
+lib/libtbb.so
 
 # DRM
 lib/libdrmdecrypt.so|e33c6f9b80ed5198922f55a46d94e0eae353ffcd
@@ -31,73 +29,77 @@ vendor/lib/libWVStreamControlAPI_L1.so|1208e372c173d3d06cdeb386e404e96354391048
 vendor/lib/mediadrm/libwvdrmengine.so|07b9c17e55a334a7042b5925eba3a6099a657bec
 
 # Graphics
-etc/enctune.conf|7423d6c9fb60149a0984910424e602cfd9120901
-lib/egl/libEGL_tegra_impl.so|6dce9814b5dbe2255dcc35c9d1ea8e4ae63cf877
-lib/egl/libEGL_tegra.so|83a2c6900b61d851e549c0c5f24e97a8da8301c4
-lib/egl/libGLESv1_CM_tegra_impl.so|62e421cd8e7121da10a8d8d224bee5a6ebe2c929
-lib/egl/libGLESv1_CM_tegra.so|b750800b56952588da31b2e92ad90789834a04b1
-lib/egl/libGLESv2_tegra_impl.so|2e77bb9d809b78dc7ae145dea5c23094175b92e9
-lib/egl/libGLESv2_tegra.so|abc7bfdbccd7bcebe020dcf42461f91c87b3cc40
-lib/hw/gralloc.tegra.so|05a1a05c88798679a83e42f8b1bfbadc4acca455
-lib/hw/hwcomposer.tegra.so|ac48bb41086a1f200edf56707581b3a6c24ab5b4
-lib/libsecure_hdcp_up.so|564a1394c302ab4e74703af922038dcac825d0f7
-vendor/bin/nvcgcserver|05de4aa3e65fe281b23ae2d2cf75b37248e13c2b
-vendor/lib/libardrv_dynamic.so|8d865b419236c0b45be2dea4a462af7846dff212
-vendor/lib/libaudioavp.so|a4d13da332483c8fc0bb0fee0eb67ba12161c378
-vendor/lib/libcgdrv.so|b305c02bb23a3ed80d508945c810513f11665fba
-vendor/lib/libcplconnectclient.so|53a7f01b28ac2d5ad08ab1841ca6726adae9f876
-vendor/lib/libnvapputil.so|24ff2ca00c419e2c654f5a3d3bcd3fede9a0f596
-vendor/lib/libnvavp.so|5a5326e067da4b7dcc9ef2f5f2df82efaad3e3d3
-vendor/lib/libnvcms.so|d8cb8dd938b24635b240b6bcf40d8b3f7084afbb
-vendor/lib/libnvcpl.so|fcae83959edc70a1b610efd135a65bb549d2136a
-vendor/lib/libnvddk_2d.so|11ddb6113fa26f28c15c149444b8c06d25df6669
-vendor/lib/libnvddk_2d_v2.so|ae7cbda07c35755e6d5c81ddbe5d14938662273a
-vendor/lib/libnvfusebypass.so|8b8f94e4743f9b1963cef807eae40efd7f895063
-vendor/lib/libnvglsi.so|a444428714650bbce8a8d2938c8acc2c2ed85dba
-vendor/lib/libnvmm_audio.so|3a03df23c3d534ac64d924ab196be49dbe88a9fb
-vendor/lib/libnvmm_contentpipe.so|59c981b45dde0fae2e059bf57fbc04a54a400de2
-vendor/lib/libnvmm_image.so|25bf3d8faa30bea7c52d87b1b13b31ef3022e32f
-vendor/lib/libnvmmlite_audio.so|32ef691cd8b7c16e26546fec46b1a76f3a21cd24
-vendor/lib/libnvmmlite_image.so|f6ff888f15bfb39b5c33d179020dd3ef774afd4c
-vendor/lib/libnvmmlite.so|0d6e002fc6a19edfec6387f21cd507af5f10d2f6
-vendor/lib/libnvmmlite_utils.so|41884be538b1af60e2e6bb04f065fd8dfff1fd23
-vendor/lib/libnvmmlite_video.so|ba7ded75eb43c0311c5bc840ce2c4b2ce9b87c19
-vendor/lib/libnvmm_manager.so|6e416758c47a8627483196b440d2df0b0776ca78
-vendor/lib/libnvmm_parser.so|52f0e1f571b5d6d1e1276398375241c9d8c9e180
-vendor/lib/libnvmm_service.so|87769343626b4fcec6c2da1b36a1205885658cb9
-vendor/lib/libnvmm.so|fb50acb76144acf587b680175e513d2c08f159b6
-vendor/lib/libnvmm_utils.so|3e668c79f9284c4f778ffd901eec0cd5752235e8
-vendor/lib/libnvmm_video.so|760c05ee0e08458b06bbe133b4166176740feacc
-vendor/lib/libnvmm_writer.so|01b30b2d91584c83b1e3978bbdcf64a41b057cc6
-vendor/lib/libnvodm_dtvtuner.so|e203798ec2a075c1e6cf5277122eb4bc8301bf63
-vendor/lib/libnvodm_hdmi.so|109719f56d7a0208e772dcc5dfbd630c96bb08f2
-vendor/lib/libnvodm_misc.so|3385c11e930427071687db899a0de1ec406b7186
-vendor/lib/libnvodm_query.so|09c54e9ed893ebcfd43a2f91f797380a5f94a484
-vendor/lib/libnvomxadaptor.so|9c97e01d9ee9647de44ffd3164c27ea3be73b883
-vendor/lib/libnvomxilclient.so|676bab8489d6e7bb9ce8418f99b9c09c19c385aa
-vendor/lib/libnvomx.so|a002bf068a15e086caf29810d36cbcc0898f8d8d
-vendor/lib/libnvos.so|3d191453b35d90e80abf30a268de7eacc3bdbe49
-vendor/lib/libnvparser.so|788d7ef2a34cd24694f86fdc5ffab80fb53c11d0
-vendor/lib/libnvrm_graphics.so|2ee53483ccab293f97e7e60d29224c1bfe3eda69
--vendor/lib/libnvrm.so|b821111252734b7b68696bc229f1a622edf572e5
-vendor/lib/libnvsm.so|5fc1e2827b826ed4bc194f8f29f4680c5c5ae119
-vendor/lib/libnvtestio.so|97c4463c823c6ab3113213f6c44e410868474f53
-vendor/lib/libnvtestresults.so|8f8747216abcaba2b66520d02f6a200523ee2109
-vendor/lib/libnvtnr.so|78a1bf686625bbe7dbc07fc0841c8322c3106fe6
-vendor/lib/libnvtvmr.so|5d7205903d445c2d87745f74afdf5479c7c2bbec
-vendor/lib/libnvwinsys.so|d0ccf2d65f0b07cb966d2d737de85009b643a703
-vendor/lib/libnvwsi.so|40c39f76726dad6be58cb2e9e16d69bf1be9885e
-vendor/lib/libstagefrighthw.so|d9715da4cf958ec7b6ecb084db4836e9c1d6c723
-vendor/lib/libtsechdcp.so|e50addb85674aa55b9c07a89b192efc483cd8c6e
-vendor/lib/libtsec_wrapper.so|f00c8d67b586e0c627fa5a66c3fc50e153a39b30
+bin/nvcgcserver
+etc/enctune.conf
+lib/egl/libEGL_tegra_impl.so
+lib/egl/libEGL_tegra.so
+lib/egl/libGLESv1_CM_tegra_impl.so
+lib/egl/libGLESv1_CM_tegra.so
+lib/egl/libGLESv2_tegra_impl.so
+lib/egl/libGLESv2_tegra.so
+lib/hw/gralloc.tegra.so
+lib/hw/hwcomposer.tegra.so
+lib/libardrv_dynamic.so
+lib/libcgdrv.so
+lib/libcplconnectclient.so
+lib/libnvapputil.so
+lib/libnvavp.so
+lib/libnvblit.so
+lib/libnvcap_video.so
+lib/libnvmm_camera.so
+lib/libnvmm_audio.so
+lib/libnvcms.so
+lib/libnvcpl.so
+lib/libnvddk_2d.so
+lib/libnvddk_2d_v2.so
+lib/libnvfusebypass.so
+lib/libnvglsi.so
+lib/libnvmm_contentpipe.so
+lib/libnvmm_image.so
+lib/libnvmmlite_audio.so
+lib/libnvmmlite_image.so
+lib/libnvmmlite_msaudio.so
+lib/libnvmmlite.so
+lib/libnvmmlite_utils.so
+lib/libnvmmlite_video.so
+lib/libnvmm_manager.so
+lib/libnvmm_msaudio.so
+lib/libnvmm_parser.so
+lib/libnvmm_service.so
+lib/libnvmm.so
+lib/libnvmm_utils.so
+lib/libnvmm_vc1_video.so
+lib/libnvmm_video.so
+lib/libnvmm_writer.so
+lib/libnvodm_imager.so
+lib/libnvodm_query.so
+lib/libnvomxadaptor.so
+lib/libnvomxilclient.so
+lib/libnvomx.so
+lib/libnvos.so
+lib/libnvparser.so
+lib/libnvrm_graphics.so
+lib/libnvrm.so
+lib/libnvsm.so
+lib/libnvtestio.so
+lib/libnvtestresults.so
+lib/libnvtnr.so
+lib/libnvtvmr.so
+lib/libnvwinsys.so
+lib/libnvwsi.so
+lib/libsecure_hdcp_up.so
+lib/libstagefrighthw.so
+lib/libtsechdcp.so
+lib/libtsec_wrapper.so
 
 # Graphics firmware
 etc/firmware/tegra11x/nvhost_msenc02.fw
-etc/firmware/tegra11x/nvhost_tsec.fw|d383b3bf3c99c384e6e0c70d254d1ae6712d6f24
-etc/firmware/nvavp_aud_ucode.bin|4c4e85e47f5ce890a2d090750c951dc03d86d39b
-etc/firmware/nvavp_os_0ff00000.bin|7ba29da27466ec98bd2ebc21e599f25db24ef905
-etc/firmware/nvavp_os_eff00000.bin|0fb1c693c3ab931a2242f93df6c1c4effdf545f1
+etc/firmware/tegra11x/nvhost_tsec.fw
+etc/firmware/nvavp_aud_ucode.bin
+etc/firmware/nvavp_os_0ff00000.bin
+etc/firmware/nvavp_os_eff00000.bin
 etc/firmware/nvavp_vid_ucode.bin
+etc/firmware/nvavp_vid_ucode_alt.bin
 
 # HDCP SRM
 etc/hdcpsrm/hdcp1x.srm
@@ -105,13 +107,13 @@ etc/hdcpsrm/hdcp2x.srm
 etc/hdcpsrm/hdcp2xtest.srm
 
 # Keystore
--lib/libtf_crypto_sst.so|2b872e39a7345099514aa3c3dfbbd53b1c2af1d9
+-lib/libtf_crypto_sst.so
 
 # Sensors
-lib/hw/lights.bowser.so|e1e8dfff4445e89d94e09264950ad9a17fd01c94
+lib/hw/lights.bowser.so
 
 # Stlport
 lib/libstlport.so|005b9e9455cc0a5a9d5b043258a3d148666c2308
 
 # Trusted Foundation daemon
-bin/tf_daemon|c15b12d95c8483b7b91ff81c6de0826ec296db3d
+bin/tf_daemon
