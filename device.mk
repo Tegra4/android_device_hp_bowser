@@ -87,6 +87,7 @@ PRODUCT_PACKAGES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-impl \
     gralloc.tegra \
     hwcomposer.tegra
 
