@@ -67,6 +67,7 @@ BOARD_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # HIDL
 DEVICE_MANIFEST_FILE := device/hp/bowser/manifest.xml
+DEVICE_MATRIX_FILE :=  device/hp/bowser/compatibility_matrix.xml
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
