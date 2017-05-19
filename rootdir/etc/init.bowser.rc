@@ -147,7 +147,7 @@ on property:init.svc.hciattach=stopped
     write /sys/devices/platform/reg-userspace-consumer.1/state disabled
 
 # Prepare TF service
-import init.tf.rc
+import /vendor/etc/init/hw/init.tf.rc
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
