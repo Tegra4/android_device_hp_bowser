@@ -22,18 +22,6 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 
-
-# NV OMX
-
-include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := nvomx.cpp
-LOCAL_SHARED_LIBRARIES := libbinder
-LOCAL_MODULE := libshim_nvomx
-LOCAL_MODULE_TAGS := optional
-
-include $(BUILD_SHARED_LIBRARY)
-
 # Widevine
 
 include $(CLEAR_VARS)
