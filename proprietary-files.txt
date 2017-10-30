@@ -79,7 +79,7 @@ lib/libnvomx.so
 lib/libnvos.so
 lib/libnvparser.so
 lib/libnvrm_graphics.so
--lib/libnvrm.so
+lib/libnvrm.so
 lib/libnvsm.so
 lib/libnvtestio.so
 lib/libnvtestresults.so
