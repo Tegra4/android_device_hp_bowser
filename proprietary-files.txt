@@ -1,35 +1,38 @@
+
 # Audio
-lib/hw/audio_policy.tegra.so
-lib/hw/audio.primary.tegra.so
-lib/libnvaudioservice.so
-lib/libnvcapaudioservice.so
-lib/libnvcapclk.so
-lib/libnvoice.so
+lib/hw/audio_policy.tegra.so|66aba85846db9e0fcb82b8437e7e683455b203fb
+lib/hw/audio.primary.tegra.so|81e569b6d7d0dc33c55a81f2e723d794e8a841ce
+lib/libnvaudioservice.so|1a9d8e5c3daa981599b54f420223d7015c1da448
+lib/libnvcapaudioservice.so|5a0f8ab9283b2d9f9fc029980ec6858979912b91
+lib/libnvcapclk.so|f2cf817302b995a60ba4ad7859623e87d4eec248
+lib/libnvoice.so|9b549c1a57f9e43a6f6beedc6f5a0c66ebe27f05
 
 # Bowser latop base
-bin/bowser_ec_flash
-etc/firmware/bowser_ec.bin
-etc/firmware/bowser_ec_hpsign.bin
-etc/firmware/OfficialPubKey.bin
+bin/bowser_ec_flash|162bca25d7ee182a450db197d2fd0b472e369416
+etc/firmware/bowser_ec.bin|f49cdadf090021436d32e2a1dd4211df3c09f319
+etc/firmware/bowser_ec_hpsign.bin|b9926f40a1835b1f6975f13662b83e1a9acd9db1
+etc/firmware/OfficialPubKey.bin|217a32beab118de4892e5b2b94a1bb3b0d4cc77a
 
 # Camera
-lib/hw/camera.tegra.so
-lib/libfcamdng.so
-lib/libnvcamerahdr.so
-lib/libnvcam_imageencoder.so
-lib/libopencv24_tegra.so
-lib/libtbb.so
+lib/hw/camera.tegra.so|9c0452777270270eb2bd3e061d86b0452f099e1e
+lib/libfcamdng.so|91feabe5cd64ac92406a85bef6b592ea38008ee3
+lib/libnvcamerahdr.so|19369bb984c203fb3c15047a6765efa90195ff09
+lib/libnvcam_imageencoder.so|fea3a14526f430ca00ef3debcb458b6135deffbc
+lib/libnvmm_camera.so|1220de8899f73436156a475ae2b16a7e34734b9c
+lib/libnvodm_imager.so|cb4c276351ffdf4e5c1697e5b1df2e60c6d57ba4
+lib/libopencv24_tegra.so|0ef07e3387e3c818c0d3d806dc496c8c2b461614
+lib/libtbb.so|5a5736854272582bd8c0634eb44e6817d12ea872
 
 # DRM
-lib/libdrmdecrypt.so|e33c6f9b80ed5198922f55a46d94e0eae353ffcd
-lib/liboemcrypto.so|ce558f6d7ea6e41066d54715a221ea46851490bd
-vendor/lib/libwvdrm_L1.so|b7d969ae21f9f4619b8b7892193bfea32c24f36e
-vendor/lib/libwvm.so|bdef4c40e9b18d650069c35f3a55686a71483824
-vendor/lib/libWVStreamControlAPI_L1.so|1208e372c173d3d06cdeb386e404e96354391048
-vendor/lib/mediadrm/libwvdrmengine.so|07b9c17e55a334a7042b5925eba3a6099a657bec
+#lib/libdrmdecrypt.so
+#lib/liboemcrypto.so
+#vendor/lib/drm/libdrmwvmplugin.so
+#vendor/lib/libwvdrm_L1.so
+#vendor/lib/libwvm.so
+#vendor/lib/libWVStreamControlAPI_L1.so
+#vendor/lib/mediadrm/libwvdrmengine.so
 
 # Graphics
-bin/nvcgcserver
 etc/enctune.conf
 lib/egl/libEGL_tegra_impl.so
 lib/egl/libEGL_tegra.so
@@ -39,58 +42,56 @@ lib/egl/libGLESv2_tegra_impl.so
 lib/egl/libGLESv2_tegra.so
 lib/hw/gralloc.tegra.so
 lib/hw/hwcomposer.tegra.so
-lib/libardrv_dynamic.so
-lib/libcgdrv.so
-lib/libcplconnectclient.so
-lib/libnvapputil.so
-lib/libnvavp.so
-lib/libnvblit.so
-lib/libnvcap_video.so
-lib/libnvmm_camera.so
-lib/libnvmm_audio.so
-lib/libnvcms.so
-lib/libnvcpl.so
-lib/libnvddk_2d.so
-lib/libnvddk_2d_v2.so
-lib/libnvfusebypass.so
-lib/libnvglsi.so
-lib/libnvmm_contentpipe.so
-lib/libnvmm_image.so
-lib/libnvmmlite_audio.so
-lib/libnvmmlite_image.so
-lib/libnvmmlite_msaudio.so
-lib/libnvmmlite.so
-lib/libnvmmlite_utils.so
-lib/libnvmmlite_video.so
-lib/libnvmm_manager.so
-lib/libnvmm_msaudio.so
-lib/libnvmm_parser.so
-lib/libnvmm_service.so
-lib/libnvmm.so
-lib/libnvmm_utils.so
-lib/libnvmm_vc1_video.so
-lib/libnvmm_video.so
-lib/libnvmm_writer.so
-lib/libnvodm_imager.so
-lib/libnvodm_query.so
-lib/libnvomxadaptor.so
-lib/libnvomxilclient.so
-lib/libnvomx.so
-lib/libnvos.so
-lib/libnvparser.so
-lib/libnvrm_graphics.so
-lib/libnvrm.so
-lib/libnvsm.so
-lib/libnvtestio.so
-lib/libnvtestresults.so
-lib/libnvtnr.so
-lib/libnvtvmr.so
-lib/libnvwinsys.so
-lib/libnvwsi.so
 lib/libsecure_hdcp_up.so
-lib/libstagefrighthw.so
-lib/libtsechdcp.so
-lib/libtsec_wrapper.so
+vendor/bin/nvcgcserver
+vendor/lib/libardrv_dynamic.so
+vendor/lib/libaudioavp.so
+vendor/lib/libcgdrv.so
+vendor/lib/libcplconnectclient.so
+vendor/lib/libnvapputil.so
+vendor/lib/libnvavp.so
+vendor/lib/libnvcms.so
+vendor/lib/libnvcpl.so
+vendor/lib/libnvddk_2d.so
+vendor/lib/libnvddk_2d_v2.so
+vendor/lib/libnvfusebypass.so
+vendor/lib/libnvglsi.so
+vendor/lib/libnvmm_audio.so
+vendor/lib/libnvmm_contentpipe.so
+vendor/lib/libnvmm_image.so
+vendor/lib/libnvmmlite_audio.so
+vendor/lib/libnvmmlite_image.so
+vendor/lib/libnvmmlite.so
+vendor/lib/libnvmmlite_utils.so
+vendor/lib/libnvmmlite_video.so
+vendor/lib/libnvmm_manager.so
+vendor/lib/libnvmm_parser.so
+vendor/lib/libnvmm_service.so
+vendor/lib/libnvmm.so
+vendor/lib/libnvmm_utils.so
+vendor/lib/libnvmm_video.so
+vendor/lib/libnvmm_writer.so
+vendor/lib/libnvodm_dtvtuner.so
+vendor/lib/libnvodm_hdmi.so
+vendor/lib/libnvodm_misc.so
+vendor/lib/libnvodm_query.so
+vendor/lib/libnvomxadaptor.so
+vendor/lib/libnvomxilclient.so
+vendor/lib/libnvomx.so
+vendor/lib/libnvos.so
+vendor/lib/libnvparser.so
+vendor/lib/libnvrm_graphics.so
+vendor/lib/libnvrm.so
+vendor/lib/libnvsm.so
+vendor/lib/libnvtestio.so
+vendor/lib/libnvtestresults.so
+vendor/lib/libnvtnr.so
+vendor/lib/libnvtvmr.so
+vendor/lib/libnvwinsys.so
+vendor/lib/libnvwsi.so
+vendor/lib/libstagefrighthw.so
+vendor/lib/libtsechdcp.so
+vendor/lib/libtsec_wrapper.so
 
 # Graphics firmware
 etc/firmware/tegra11x/nvhost_msenc02.fw
@@ -98,8 +99,7 @@ etc/firmware/tegra11x/nvhost_tsec.fw
 etc/firmware/nvavp_aud_ucode.bin
 etc/firmware/nvavp_os_0ff00000.bin
 etc/firmware/nvavp_os_eff00000.bin
-etc/firmware/nvavp_vid_ucode.bin
-etc/firmware/nvavp_vid_ucode_alt.bin
+etc/firmware/nvavp_vid_ucode.bin|8f37eb88c9488791180fe0fa80cc3400dd1304cf
 
 # HDCP SRM
 etc/hdcpsrm/hdcp1x.srm
@@ -110,10 +110,7 @@ etc/hdcpsrm/hdcp2xtest.srm
 -lib/libtf_crypto_sst.so
 
 # Sensors
-lib/hw/lights.bowser.so
-
-# Stlport
-lib/libstlport.so|005b9e9455cc0a5a9d5b043258a3d148666c2308
+lib/hw/lights.bowser.so|e1e8dfff4445e89d94e09264950ad9a17fd01c94
 
 # Trusted Foundation daemon
-bin/tf_daemon
+#bin/tf_daemon
