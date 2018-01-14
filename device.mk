@@ -16,8 +16,9 @@
 
 $(call inherit-product-if-exists, vendor/hp/bowser/bowser-vendor.mk)
 
-# Overlay
+# Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Permissions
 PRODUCT_COPY_FILES += \
