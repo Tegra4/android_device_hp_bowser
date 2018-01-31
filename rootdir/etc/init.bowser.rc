@@ -20,7 +20,7 @@ on init
     symlink /sdcard /storage/sdcard0
 
 on fs
-    mount_all /fstab.bowser
+    mount_all /vendor/etc/fstab.bowser
 
 on post-fs-data
     mkdir /data/nvcam 0700 media camera
