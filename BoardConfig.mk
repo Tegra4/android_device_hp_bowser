@@ -33,9 +33,10 @@ TARGET_TEGRA_VERSION := t114
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=bowser rtl8723bs.ifname=wlan0 rtl8723bs.if2name=p2p0 androidboot.selinux=permissive
+BOARD_KERNEL_IMAGE_NAME = zImage
 LZMA_RAMDISK_TARGETS := boot,recovery
-TARGET_KERNEL_SOURCE := kernel/hp/bowser
 TARGET_KERNEL_CONFIG := tegra11_bowser_android_defconfig
+TARGET_KERNEL_SOURCE := kernel/hp/bowser
 
 # Audio
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
