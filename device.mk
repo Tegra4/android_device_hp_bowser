@@ -122,6 +122,15 @@ PRODUCT_PACKAGES += \
     syntouchpad \
     syntouchpad_recovery
 
+# Tegra Static libraries (Needed by HALs)
+PRODUCT_PACKAGES += \
+    libnvcameradata \
+    libnvcameraframedata \
+    libnvglcomposer \
+    libnvgr2dcomposer \
+    libnvviccomposer \
+    libnvmmtransport
+
 # Wifi
 PRODUCT_PACKAGES += \
     hostapd \
