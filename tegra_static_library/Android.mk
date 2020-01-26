@@ -25,6 +25,14 @@ LOCAL_MODULE_SUFFIX := .a
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := libnvfxmath
+LOCAL_SRC_FILES := libnvfxmath.a
+LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .a
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := libnvgr2dcomposer
 LOCAL_SRC_FILES := libnvgr2dcomposer.a
 LOCAL_MODULE_CLASS := STATIC_LIBRARIES

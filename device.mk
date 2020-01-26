@@ -126,6 +126,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnvcameradata \
     libnvcameraframedata \
+    libnvfxmath \
     libnvglcomposer \
     libnvgr2dcomposer \
     libnvviccomposer \
