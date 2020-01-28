@@ -90,6 +90,11 @@ TARGET_RECOVERY_DENSITY := hdpi
 TARGET_RECOVERY_DEVICE_DIRS += device/hp/bowser
 TARGET_RECOVERY_FSTAB := device/hp/bowser/rootdir/etc/fstab.bowser
 
+# Secure OS
+SECURE_OS_BUILD := y
+BOARD_VENDOR_HDCP_ENABLED := true
+BOARD_ENABLE_SECURE_HDCP := 1
+
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/hp/bowser/sepolicy
