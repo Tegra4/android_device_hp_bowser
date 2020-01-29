@@ -69,9 +69,22 @@ PRODUCT_COPY_FILES += \
 #$(call add-product-dex-preopt-module-config,com.cyanogenmod.keyhandler,disable)
 
 # Camera
+PRODUCT_PACKAGES += \
+   libnvodm_services
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/camera_overrides_front.isp:system/etc/camera_overrides_front.isp \
     $(LOCAL_PATH)/camera/model_frontal.xml:system/etc/model_frontal.xml
+
+# Core
+PRODUCT_PACKAGES += \
+   libnvapputil \
+   libnvtestresults
+
+# Graphics
+PRODUCT_PACKAGES += \
+    gralloc.tegra \
+    hwcomposer.tegra
 
 # IDC
 PRODUCT_COPY_FILES += \
@@ -91,6 +104,13 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.tegra
+
+# Media
+PRODUCT_PACKAGES += \
+    libnvmm \
+    libnvmmlite \
+    libnvomxilclient \
+    libstagefrighthw
 
 # Media config
 PRODUCT_COPY_FILES += \
