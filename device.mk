@@ -131,10 +131,10 @@ PRODUCT_PACKAGES += \
     ueventd.bowser.rc
 
 # Shims
-PRODUCT_PACKAGES += \
-    libshim_camera \
-    libshim_icu \
-    libshim_wvm
+#PRODUCT_PACKAGES += \
+#    libshim_camera \
+#    libshim_icu \
+#    libshim_wvm
 
 # Synaptics Touchpad
 PRODUCT_PACKAGES += \

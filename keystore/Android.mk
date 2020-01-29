@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq (,$(filter bowser, $(TARGET_DEVICE)))
+ifneq (,$(filter aosp_bowser, $(TARGET_DEVICE)))
 
 include $(CLEAR_VARS)
 

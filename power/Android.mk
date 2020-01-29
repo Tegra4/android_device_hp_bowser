@@ -14,6 +14,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+ifneq (,$(filter aosp_bowser, $(TARGET_DEVICE)))
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := bowser_power.cpp nvpowerhal.cpp powerhal_utils.cpp timeoutpoker.cpp
@@ -27,3 +29,5 @@ LOCAL_MODULE := power.$(TARGET_BOOTLOADER_BOARD_NAME)
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif

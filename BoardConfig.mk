@@ -96,8 +96,8 @@ BOARD_VENDOR_HDCP_ENABLED := true
 BOARD_ENABLE_SECURE_HDCP := 1
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/hp/bowser/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#    device/hp/bowser/sepolicy
 
 # Wifi
 BOARD_WLAN_DEVICE                := rtl
