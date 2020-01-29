@@ -45,7 +45,6 @@ PRODUCT_CHARACTERISTICS := tablet
 TARGET_SCREEN_HEIGHT := 1080
 TARGET_SCREEN_WIDTH := 1920
 
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
 # Audio
