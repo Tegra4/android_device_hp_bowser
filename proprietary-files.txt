@@ -34,71 +34,58 @@ lib/libtbb.so|5a5736854272582bd8c0634eb44e6817d12ea872
 
 # Graphics
 etc/enctune.conf
-lib/egl/libEGL_tegra_impl.so
-lib/egl/libEGL_tegra.so
-lib/egl/libGLESv1_CM_tegra_impl.so
-lib/egl/libGLESv1_CM_tegra.so
-lib/egl/libGLESv2_tegra_impl.so
-lib/egl/libGLESv2_tegra.so
-lib/hw/gralloc.tegra.so
-lib/hw/hwcomposer.tegra.so
-lib/libsecure_hdcp_up.so
 vendor/bin/nvcgcserver
 vendor/lib/libardrv_dynamic.so
 vendor/lib/libaudioavp.so
 vendor/lib/libcgdrv.so
-vendor/lib/libcplconnectclient.so
-vendor/lib/libnvapputil.so
-vendor/lib/libnvavp.so
+vendor/lib/libnvblit.so
 vendor/lib/libnvcms.so
 vendor/lib/libnvcpl.so
 vendor/lib/libnvddk_2d.so
 vendor/lib/libnvddk_2d_v2.so
+vendor/lib/libnvddk_vic.so
 vendor/lib/libnvfusebypass.so
-vendor/lib/libnvglsi.so
 vendor/lib/libnvmm_audio.so
 vendor/lib/libnvmm_contentpipe.so
-vendor/lib/libnvmm_image.so
 vendor/lib/libnvmmlite_audio.so
 vendor/lib/libnvmmlite_image.so
 vendor/lib/libnvmmlite.so
-vendor/lib/libnvmmlite_utils.so
-vendor/lib/libnvmmlite_video.so
-vendor/lib/libnvmm_manager.so
 vendor/lib/libnvmm_parser.so
-vendor/lib/libnvmm_service.so
-vendor/lib/libnvmm.so
-vendor/lib/libnvmm_utils.so
-vendor/lib/libnvmm_video.so
-vendor/lib/libnvmm_writer.so
-vendor/lib/libnvodm_dtvtuner.so
-vendor/lib/libnvodm_hdmi.so
-vendor/lib/libnvodm_misc.so
 vendor/lib/libnvodm_query.so
 vendor/lib/libnvomxadaptor.so
-vendor/lib/libnvomxilclient.so
 vendor/lib/libnvomx.so
-vendor/lib/libnvos.so
 vendor/lib/libnvparser.so
-vendor/lib/libnvrm_graphics.so
-vendor/lib/libnvrm.so
 vendor/lib/libnvsm.so
-vendor/lib/libnvtestio.so
-vendor/lib/libnvtestresults.so
 vendor/lib/libnvtnr.so
 vendor/lib/libnvtvmr.so
 vendor/lib/libnvwinsys.so
 vendor/lib/libnvwsi.so
-vendor/lib/libstagefrighthw.so
+vendor/lib/libsecure_hdcp_up.so
 vendor/lib/libtsechdcp.so
 vendor/lib/libtsec_wrapper.so
 
+# t114 (these depended on glcore or nvrmapi on t124)
+lib/egl/libEGL_tegra_impl.so|53d5d23a2bdb7385ba90724f51b80a54b160adc5
+lib/egl/libEGL_tegra.so|05ee6b2d40880c8dcbd2ff0324a4a3f209dd979a
+lib/egl/libGLESv1_CM_tegra_impl.so|ba9f0ed74057dd72b3c4eec34212ab24281537f3
+lib/egl/libGLESv1_CM_tegra.so|6d6b0f8d8de7e92551f1dfda17f0e380bc7bfc8b
+lib/egl/libGLESv2_tegra_impl.so|70bb196a89edbd3dcba5403231e5e9396ff2e285
+lib/egl/libGLESv2_tegra.so|021b0f6b0c328be62ad37ef56b22be979069407d
+vendor/lib/libnvglsi.so|e297045bbde1dfce9fa13165e92769d9e97173df
+vendor/lib/libnvmmlite_video.so|033dd55e1021522f18ed8603008470b0446bf36a
+
+# t114 (doesn't exist on t124)
+#vendor/lib/libnvmm_manager.so
+#vendor/lib/libnvmm_image.so
+#vendor/lib/libnvmm_service.so
+#vendor/lib/libnvmm_video.so
+
 # Graphics firmware
-etc/firmware/tegra11x/nvhost_msenc02.fw
-etc/firmware/tegra11x/nvhost_tsec.fw
-etc/firmware/nvavp_aud_ucode.bin
-etc/firmware/nvavp_os_0ff00000.bin
-etc/firmware/nvavp_os_eff00000.bin
+etc/firmware/tegra11x/nvhost_msenc02.fw|93bd00a934746a4fd5534cdacf609ce55dd005f3
+etc/firmware/tegra11x/nvhost_tsec.fw|d383b3bf3c99c384e6e0c70d254d1ae6712d6f24
+etc/firmware/nvavp_aud_ucode.bin|4c4e85e47f5ce890a2d090750c951dc03d86d39b
+etc/firmware/nvavp_os_0ff00000.bin|7ba29da27466ec98bd2ebc21e599f25db24ef905
+etc/firmware/nvavp_os_eff00000.bin|0fb1c693c3ab931a2242f93df6c1c4effdf545f1
 etc/firmware/nvavp_vid_ucode.bin|8f37eb88c9488791180fe0fa80cc3400dd1304cf
 
 # HDCP SRM
@@ -107,10 +94,7 @@ etc/hdcpsrm/hdcp2x.srm
 etc/hdcpsrm/hdcp2xtest.srm
 
 # Keystore
--lib/libtf_crypto_sst.so
-
-# Sensors
-lib/hw/lights.bowser.so|e1e8dfff4445e89d94e09264950ad9a17fd01c94
+#-lib/libtf_crypto_sst.so
 
 # Trusted Foundation daemon
 #bin/tf_daemon
