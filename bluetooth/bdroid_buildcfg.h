@@ -24,10 +24,16 @@
 // MINOR CLASS: TABLET
 #define BTA_DM_COD {0x1A, 0x01, 0x1C}
 
-#define BTA_GATT_DEBUG TRUE
+#define BTA_GATT_DEBUG FALSE
 
-#define BTM_BLE_SCAN_SLOW_INT_1 (160)
-#define BTM_BLE_SCAN_SLOW_WIN_1 (32)
+#define PORT_RX_BUF_LOW_WM  (10)
+#define PORT_RX_BUF_HIGH_WM  (40)
+#define PORT_RX_BUF_CRITICAL_WM  (45)
+#define PORT_CREDIT_RX_MAX   (48)
+
+#define HCI_MAX_SIMUL_CMDS (1)
+#define BTM_BLE_SCAN_SLOW_INT_1 (144)
+#define BTM_BLE_SCAN_SLOW_WIN_1 (16)
 #define BTM_MAX_VSE_CALLBACKS  (6)
 
 #define BTM_BLE_CONN_INT_MIN_DEF 0x06
@@ -38,5 +44,28 @@
 #define BTIF_HF_SERVICE_NAMES  { BTIF_HSAG_SERVICE_NAME, NULL }
 
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
+#define BTA_HOST_INTERLEAVE_SEARCH FALSE
 
+/*heartbeat log define*/
+#define BTPOLL_DBG FALSE
+/*hci log define*/
+#define BTHC_DBG FALSE
+/*avdtp log define*/
+//#define AVDT_DEBUG TRUE
+/*BT log verbose*/
+#define BT_TRACE_VERBOSE TRUE
+/* BT trace messages*/
+#define BT_USE_TRACES  TRUE
+/*A2DP SINK ENABLE*/
+#define BTA_AV_SINK_INCLUDED TRUE
+#define BLE_LOCAL_PRIVACY_ENABLED FALSE
+#define USE_AUDIO_TRACK TRUE
+/*BT lib vendor log*/
+//#define BTVND_DBG TRUE
+/*page timeout */
+#define BTA_DM_PAGE_TIMEOUT 8192
+#define BTM_LOCAL_IO_CAPS_BLE   BTM_IO_CAP_KBDISP
+#define BT_HCI_DEVICE_NODE_MAX_LEN 512
+
+#define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
 #endif
