@@ -16,7 +16,6 @@ on early-init
     write /sys/class/gpio/gpio131/direction "in"
 
 on init
-    export LD_SHIM_LIBS "/system/lib/libicuuc.so|libshim_icu.so:/system/vendor/lib/libwvm.so|libshim_wvm.so:/system/lib/libopencv24_tegra.so|libshim_camera"
 
     symlink /sdcard /storage/sdcard0
 
